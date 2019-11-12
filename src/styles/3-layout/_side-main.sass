@@ -1,0 +1,42 @@
+*
+    box-sizing: border-box
+
+.row
+    display: flex
+    flex-wrap: wrap
+    height: 100%
+
+.side
+    flex-basis: 190px
+    background-color: #ebebeb
+    height: 100%
+    padding: 20px
+    line-height: 8px
+
+.main
+    flex: 1
+    height: 100%
+    background-color: gray
+    display: flex
+
+.columnText
+    display: none
+    float: left
+    height: 100%
+    flex-basis: 200px
+    padding: 20px
+    line-height: 18px
+    text-align: right
+    background-color: #e9da58a2
+
+.columnPhoto
+    flex: 1
+    float: right
+    height: 100%
+    padding: 20px
+    background-color: #dbdbdbb4
+
+.main:after
+    content: " "
+    display: table
+    clear: both
