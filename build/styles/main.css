@@ -42,8 +42,7 @@ h1 {
 }
 
 .tabContent {
-  display: none;
-  animation: fadeEffect 1s;
+  animation: fadeEffect 1;
   float: inherit;
   height: inherit;
   padding: inherit;
@@ -84,7 +83,6 @@ body {
 }
 
 .columnText {
-  display: none;
   float: left;
   height: 100%;
   flex-basis: 200px;
