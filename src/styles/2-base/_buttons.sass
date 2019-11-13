@@ -1,34 +1,51 @@
 @keyframes fadeEffect
-    from
+    0%
         opacity: 0
-    to
+    70%
+        opacity: 0.8
+    100%
         opacity: 1
 
-.tab button
+.side button
     display: block
     background-color: inherit
     color: $text-color
     font-family: $main-font
-    font-size: 26px
+    font-size: 24px
+    line-height: 16px
     text-align: left
     cursor: pointer
     border: none
     outline: none
-    transition: 0.6s
+    transition: 0.5s
 
-
-.tab button:hover
+.side button:hover
     color: $background-color
 
-.tab button.active
+.side button.active
     color: #44444493
+
+.main button
+    display: block
+    background-color: inherit
+    color: $text-color
+    font-family: $main-font
+    font-size: 20px
+    line-height: 16px
+    text-align: right
+    margin-left: 60px
+    cursor: pointer
+    border: none
+    outline: none
 
 .tabContent
     display: none
-    animation: fadeEffect 1
+    animation: fadeEffect 1.2s
     float: inherit
     height: inherit
     padding: inherit
-    line-height: inherit
+    padding-top: 10px
+    font-size: 13px
+    line-height: 13px
     text-align: inherit
     background-color: inherit

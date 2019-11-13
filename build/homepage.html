@@ -14,23 +14,55 @@
     <script type="text/javascript" src="/src/scripts/mainScript.js"></script>
 <!--button still doesn't load-->
     <div class="row">
-        <div class="side tab">
-                <button class="fakeButton">Tom Winkler</button>
+        <div class="side">
+                <button class="tabLinks" onclick="openTab(event, 'Work')">Tom Winkler</button>
                 <button class="tabLinks" onclick="openTab(event, 'Work')">Work</button>
                 <button class="tabLinks" onclick="openTab(event, 'About')">About</button>
 
         </div>
         
-        <div class="main"> <!--something about class="columnText" and "class="tabContetn" division doesnt work-->
+        <div class="main">
             <div class="columnText">
-                <div id="Work" class="tabContent">
-                    <p>some stuff i made</p>
+                <!--index first // -->
+                <div id="Work" class="tabContent"> 
+                    <div class="index">
+                        <button class="tabLinks" onclick="openTab(event, 'project1')">project #1</button>
+                        <button class="tabLinks" onclick="openTab(event, 'project2')">project #2</button>
+                        <button class="tabLinks" onclick="openTab(event, 'project3')">project #3</button>
+                    </p>
+                    </div>
                 </div>
-                <div id="About" class="tabContent">
+                <!--vsebina projektov-->
+                <div class="projectContent">
+                        <div id="project1" class="tabContent">
+                            <p>Field of interest: textures
+                                    and shapes which can
+                                    not be controlled - ones
+                                    that form in clay while
+                                    it is kneaded, torn apart,
+                                    scratched with objects
+                                    etc. These two projects
+                                    derived from ur incapability
+                                    to reacreate them
+                                    by hand.</p>
+                        </div>
+                        <div id="project2" class="tabContent">
+                            <p>Živijo</p>
+                        </div>
+                        <div id="project3" class="tabContent">
+                            <p>Čau</p>
+                        </div>
+                </div>
+                <!--kratek "about" opis-->
+                <div id="About" class="tabContent aboutContent">
                         <p>I am Tom</p>
                 </div>
             </div>
-            <div class="columnPhoto"> <p>SLIKA</p></div>
+
+            <div class="columnPhoto"> 
+                <p>SLIKA</p>
+            </div>
+
         </div>
 
         
