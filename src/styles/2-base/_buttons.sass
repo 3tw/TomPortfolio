@@ -5,23 +5,26 @@
         opacity: 1
 
 .tab button
-    display: contents
+    display: block
     background-color: inherit
     color: $text-color
     font-family: $main-font
     font-size: 26px
-    line-height: inherit
     text-align: left
     cursor: pointer
-    transition: 0.3s
+    border: none
+    outline: none
+    transition: 0.6s
 
-.tab button:hover /*doesnt work??? */
-    background-color: white
 
-.tab button.active /*doesnt work??? */
-    color: black
+.tab button:hover
+    color: $background-color
+
+.tab button.active
+    color: #44444493
 
 .tabContent
+    display: none
     animation: fadeEffect 1
     float: inherit
     height: inherit

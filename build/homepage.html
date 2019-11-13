@@ -15,15 +15,19 @@
 <!--button still doesn't load-->
     <div class="row">
         <div class="side tab">
-                <h1>Tom Winkler</h1>
-                <button class="tabLinks" onclick="open(event, 'Work')">Work</button>
-                <h1>About</h1>
+                <button class="fakeButton">Tom Winkler</button>
+                <button class="tabLinks" onclick="openTab(event, 'Work')">Work</button>
+                <button class="tabLinks" onclick="openTab(event, 'About')">About</button>
+
         </div>
         
         <div class="main"> <!--something about class="columnText" and "class="tabContetn" division doesnt work-->
-            <div class="columnText">Textures that form in clay while it is kneaded, torn apart, scratched with objects etc. have always facinated me beacuse the way they were formed could never be really controled.
+            <div class="columnText">
                 <div id="Work" class="tabContent">
                     <p>some stuff i made</p>
+                </div>
+                <div id="About" class="tabContent">
+                        <p>I am Tom</p>
                 </div>
             </div>
             <div class="columnPhoto"> <p>SLIKA</p></div>
@@ -34,6 +38,7 @@
     </div>
 
 </body>
+
 </html>
 
 
