@@ -7,9 +7,8 @@ html {
   src: url("https://fonts.googleapis.com/css?family=Crimson+Text&display=swap");
 }
 h1 {
-  text-align: left;
   font-weight: normal;
-  font-size: 26px;
+  font-size: 18px;
   line-height: inherit;
 }
 
@@ -66,7 +65,7 @@ h1 {
   float: inherit;
   height: inherit;
   padding: inherit;
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 13px;
   line-height: 13px;
   text-align: inherit;
@@ -110,8 +109,17 @@ body {
   padding: 0px;
   padding-top: 10px;
   line-height: 10px;
-  text-align: right;
   background-color: white;
+  overflow: scroll;
+}
+
+.columnText::-webkit-scrollbar {
+  display: none;
+}
+
+.columnText {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
 }
 
 .index {
@@ -126,7 +134,7 @@ body {
   font-family: "Crimson Text", serif;
   font-size: 18px;
   padding-right: 7px;
-  text-align: right;
+  text-align: justify;
 }
 
 .columnPhoto {
@@ -161,11 +169,6 @@ body {
   .columnText, .columnPhoto {
     width: 100%;
     padding: 20px;
-  }
-
-  .main button {
-    text-align: left;
-    margin-left: auto;
   }
 }
 

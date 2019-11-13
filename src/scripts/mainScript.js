@@ -13,7 +13,9 @@ function openTab(event, index) {
     }
     
     document.getElementById(index).style.display = "block";
+    if (id !== "default") {
     event.currentTarget.className += " active";
+    }
     
 
 }

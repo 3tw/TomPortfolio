@@ -26,8 +26,15 @@
     padding: 0px
     padding-top: 10px
     line-height: 10px
-    text-align: right
     background-color: white
+    overflow: scroll
+
+.columnText::-webkit-scrollbar
+    display: none
+      
+.columnText
+    -ms-overflow-style: none
+    overflow: -moz-scrollbars-none
 
 .index
     font-size: 20px
@@ -40,7 +47,7 @@
     font-family: $main-font
     font-size: 18px
     padding-right: 7px
-    text-align: right
+    text-align: justify
 
 .columnPhoto
     flex: 1
