@@ -1,0 +1,9 @@
+> v majhnem oknu pomakni gumbe "projekt" desno ///
+
+> puščica nazaj pod tekstom ///
+
+> lasten scrol za columnText > zbirši scrollbar ///
+
+> fotke zaklenjene -- pri scoralnju se premaknejo
+
+> padding for projects
