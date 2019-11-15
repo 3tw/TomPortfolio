@@ -4,6 +4,8 @@
 
 > lasten scrol za columnText > zbirši scrollbar ///
 
-> fotke zaklenjene -- pri scoralnju se premaknejo
+> fotke zaklenjene -- pri scoralnju se premaknejo (?)
 
-> padding for projects
+> padding for projects //
+
+> spodaj razmak pri mozzili v projectcontent

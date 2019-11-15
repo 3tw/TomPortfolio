@@ -12,10 +12,8 @@ function openTab(event, index) {
         tabLinks[i].className = tabLinks[i].className.replace(" active", "");
     }
     
-    document.getElementById(index).style.display = "block";
-    if (id !== "default") {
-    event.currentTarget.className += " active";
-    }
-    
-
+    if (index !== "default") {
+        document.getElementById(index).style.display = "block";
+        event.currentTarget.className += " active";
+    } else {}
 }

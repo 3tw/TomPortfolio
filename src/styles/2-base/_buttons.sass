@@ -1,12 +1,12 @@
 @keyframes fadeEffect
     0%
         opacity: 0
-    70%
-        opacity: 0.8
+    40%
+        opacity: 0.7
     100%
         opacity: 1
 
-.side button
+.side button /* tabs */
     display: block
     background-color: inherit
     color: $text-color
@@ -19,13 +19,13 @@
     outline: none
     transition: 0.5s
 
-/*.side button:hover
-    color: $background-color */ 
+.side button:hover
+    color: #e6e4e4 
 
-.side button.active /* doesn't work again */
-    color: #44444493 
+.side button.active
+    color: gray 
 
-.main button
+.main button /* projects*/
     display: block
     background-color: inherit
     color: $text-color
@@ -36,11 +36,14 @@
     border: none
     outline: none
 
+.projectContent button /* arrows*/
+    font-size: 115%
+
 .tabContent
     display: none
     animation: fadeEffect 1.2s
     float: inherit
     height: inherit
-    padding: inherit
     text-align: inherit
     background-color: inherit
+
