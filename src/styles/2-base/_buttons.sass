@@ -1,0 +1,49 @@
+@keyframes fadeEffect
+    0%
+        opacity: 0
+    40%
+        opacity: 0.7
+    100%
+        opacity: 1
+
+.side button /* tabs */
+    display: block
+    background-color: inherit
+    color: $text-color
+    font-family: $main-font
+    font-size: 150%
+    line-height: 0.8
+    text-align: left
+    cursor: pointer
+    border: none
+    outline: none
+    transition: 0.5s
+
+.side button:hover
+    color: #e6e4e4 
+
+.side button.active
+    color: gray 
+
+.main button /* projects*/
+    display: block
+    background-color: inherit
+    color: $text-color
+    font-family: $main-font
+    font-size: 140%
+    line-height: 0.8
+    cursor: pointer
+    border: none
+    outline: none
+
+.projectContent button /* arrows*/
+    font-size: 115%
+
+.tabContent
+    display: none
+    animation: fadeEffect 1.2s
+    float: inherit
+    height: inherit
+    text-align: inherit
+    background-color: inherit
+

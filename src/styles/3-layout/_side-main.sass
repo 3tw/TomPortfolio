@@ -1,0 +1,62 @@
+*
+    box-sizing: border-box
+
+.row
+    display: flex
+    flex-wrap: wrap
+    height: 100%
+
+.side
+    flex-basis: 18%
+    background-color: $background-color
+    height: 100%
+    padding: 1%
+
+.main
+    flex: 1
+    height: 100%
+    background-color: white
+    display: flex
+    
+
+.columnText /* doesn't affect project buttons */
+    float: left
+    height: 100%
+    flex-basis: 300px
+    font-size: 90%
+    line-height: 1
+    padding: 1%
+    background-color: white
+    overflow: scroll
+    -ms-overflow-style: none
+    overflow: -moz-scrollbars-none
+
+.columnText::-webkit-scrollbar
+    display: none
+
+.projectContent, .aboutContent
+    color: $text-color
+    font-family: $main-font
+    text-align: justify
+    padding: none
+
+.columnPhoto
+    flex: 1
+    float: right
+    height: 100%
+    display: flex
+    flex-wrap: wrap
+    background: $background-color
+
+.column
+    flex: 33%
+    max-width: 33%
+
+.column img
+    vertical-align: middle
+    width: 100%
+
+.main:after
+    content: " "
+    display: table
+    clear: both

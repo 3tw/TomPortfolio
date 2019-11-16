@@ -1,0 +1,185 @@
+html {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Crimson Text", serif;
+  src: url("https://fonts.googleapis.com/css?family=Crimson+Text&display=swap");
+}
+h1 {
+  font-weight: normal;
+  font-size: 130%;
+  line-height: inherit;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 105%;
+  line-height: inherit;
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.side button {
+  display: block;
+  background-color: inherit;
+  color: #444444;
+  font-family: "Crimson Text", serif;
+  font-size: 150%;
+  line-height: 0.8;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+.side button:hover {
+  color: #e6e4e4;
+}
+
+.side button.active {
+  color: gray;
+}
+
+.main button {
+  display: block;
+  background-color: inherit;
+  color: #444444;
+  font-family: "Crimson Text", serif;
+  font-size: 140%;
+  line-height: 0.8;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.projectContent button {
+  font-size: 115%;
+}
+
+.tabContent {
+  display: none;
+  animation: fadeEffect 1.2s;
+  float: inherit;
+  height: inherit;
+  text-align: inherit;
+  background-color: inherit;
+}
+
+body {
+  font-family: "Crimson Text", serif;
+  color: #444444;
+  height: 100%;
+  line-height: 0.8;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.side {
+  flex-basis: 18%;
+  background-color: white;
+  height: 100%;
+  padding: 1%;
+}
+
+.main {
+  flex: 1;
+  height: 100%;
+  background-color: white;
+  display: flex;
+}
+
+.columnText {
+  float: left;
+  height: 100%;
+  flex-basis: 300px;
+  font-size: 90%;
+  line-height: 1;
+  padding: 1%;
+  background-color: white;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+.columnText::-webkit-scrollbar {
+  display: none;
+}
+
+.projectContent, .aboutContent {
+  color: #444444;
+  font-family: "Crimson Text", serif;
+  text-align: justify;
+  padding: none;
+}
+
+.columnPhoto {
+  flex: 1;
+  float: right;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: white;
+}
+
+.column {
+  flex: 33%;
+  max-width: 33%;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.main:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 700px) {
+  .body {
+    overflow: scroll;
+  }
+
+  .row {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+  }
+
+  .side {
+    flex-basis: 100px;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .columnText, .columnPhoto {
+    width: 100%;
+    padding: 1%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
