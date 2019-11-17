@@ -12,10 +12,9 @@
 
 <body>
      <script type="text/javascript" src="/src/scripts/mainScript.js"></script>
-<!--button still doesn't load-->
     <div class="row">
         <div class="side">
-                <button class="tabLinks" onclick="openTab(event, 'default')">Tom Winkler</button>
+                <button class="tabLinks" id="default" onclick="openTab(event, 'default')">Tom Winkler</button>
                 <button class="tabLinks" onclick="openTab(event, 'work')">Work</button>
                 <button class="tabLinks" onclick="openTab(event, 'about')">About</button>
 
@@ -24,16 +23,16 @@
         <div class="main">
             <div class="columnText">
                 <!--index first // -->
-                <div id="work" class="tabContent"> 
+                <div class="tabContent" id="work"> 
                     <div class="index">
                         <button class="tabLinks" onclick="openTab(event, 'project1')">project #1</button>
-                        <button class="tabLinks" onclick="openTab(event, 'project2')">project #2</button>
+                        <button class="tabLinks" onclick="openTab(event, 'project1')">project #2</button>
                     </p>
                     </div>
                 </div>
                 <!--vsebina projektov-->
                 <div class="projectContent">
-                        <div id="project1" class="tabContent">
+                        <div class="tabContent" id="project1">
                             <p>Each device is made of a container (normally
                                 cylinder, sometimes a box) which
                                 has legs attached on the sides and a
@@ -91,16 +90,16 @@
                                 of removeable legs - easier transport.
 
                             </p>
-                            <button class="tabLinks" onclick="openTab(event, 'work')"><<</button>
+                            <button class="tabLinks" onclick="openTab(event, 'work')" ><<</button>
                         </div>
-                        <div id="project2" class="tabContent">
+                        <div class="tabContent" id="project2">
                             <p>Živijo</p>
                             <button class="tabLinks" onclick="openTab(event, 'work')"><<</button>
 
                         </div>
                 </div>
                 <!--kratek "about" opis-->
-                <div id="about" class="tabContent aboutContent">
+                <div class="tabContent" id="about">
                         <p>I am Tom</p>
                 </div>
             </div>

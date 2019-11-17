@@ -128,7 +128,7 @@ body {
 .projectContent, .aboutContent {
   color: #444444;
   font-family: "Crimson Text", serif;
-  text-align: justify;
+  text-align: left;
   padding: none;
 }
 

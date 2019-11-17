@@ -16,4 +16,4 @@ function openTab(event, index) {
         document.getElementById(index).style.display = "block";
         event.currentTarget.className += " active";
     } else {}
-}
+};
