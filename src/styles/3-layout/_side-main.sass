@@ -1,7 +1,5 @@
 * 
     box-sizing: border-box
-.body
-    overflow: scroll
 
 .row
     display: flex
@@ -15,11 +13,13 @@
 .projectContent
     display: flex
     flex-wrap: wrap
+
 .text
+    float: left
     flex-basis: 25%
     max-width: 25%
+    height: 100%
     min-width: 150px
-    top-margin: 0px
 
     overflow: scroll // doesnt workk
     -ms-overflow-style: none
@@ -33,6 +33,7 @@
 .images
     flex: 25%
     max-width: 25%
+
     img
         vertical-align: middle
         width: 100%

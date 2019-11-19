@@ -94,10 +94,6 @@ body {
   box-sizing: border-box;
 }
 
-.body {
-  overflow: scroll;
-}
-
 .row {
   display: flex;
 }
@@ -118,10 +114,11 @@ body {
 }
 
 .text {
+  float: left;
   flex-basis: 25%;
   max-width: 25%;
+  height: 100%;
   min-width: 150px;
-  top-margin: 0px;
   overflow: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
