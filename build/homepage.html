@@ -11,12 +11,12 @@
 
 
 <body>
-     <script type="text/javascript" src="/src/scripts/mainScript.js"></script>
+    <script type="text/javascript" src="/src/scripts/mainScript.js"></script>
     <div class="row">
-        <div class="side">
-                <button class="tabLinks" id="default" onclick="openTab(event, 'default')">Tom Winkler</button>
-                <button class="tabLinks" onclick="openTab(event, 'work')">Work</button>
-                <button class="tabLinks" onclick="openTab(event, 'about')">About</button>
+        <div class="side tabLinks">
+                <button data-target="#default">Tom Winkler</button>
+                <button data-target="#work">Work</button>
+                <button data-target="#about">About</button>
 
         </div>
         
@@ -24,15 +24,14 @@
             <div class="columnText">
                 <!--index first // -->
                 <div class="tabContent" id="work"> 
-                    <div class="index">
-                        <button class="tabLinks" onclick="openTab(event, 'project1')">project #1</button>
-                        <button class="tabLinks" onclick="openTab(event, 'project1')">project #2</button>
-                    </p>
+                    <div class="index tabLinks">
+                        <button data-target=".project1">project #1</button>
+                        <button data-target=".project2">project #2</button>
                     </div>
                 </div>
                 <!--vsebina projektov-->
                 <div class="projectContent">
-                        <div class="tabContent" id="project1">
+                        <div class="tabContent project1">
                             <p>Each device is made of a container (normally
                                 cylinder, sometimes a box) which
                                 has legs attached on the sides and a
@@ -47,54 +46,94 @@
                                 <br>
                                 <h1>The beginning</h1>
                                 <h2>March 2019, Ljubljana, Slovenia</h2>
-                                Original idea was to create recordings of
-                                work made by the hammer while it extrudes
-                                clay out of the cylinder - for precise
-                                measuring it was necessary to create
-                                a hammer that enabled me to determine
-                                exact force off impact for each hit.
+                                Original idea was to create recordings of work 
+                                made by the hammer while it extrudes clay out of 
+                                the cylinder - for precise measuring it was also 
+                                necessary to create a hammer that enabled measuring 
+                                exact force of impact for each hit. Later more 
+                                devices were introduced. 
                                 <br>
-                                <u>Problems I did not forsee:</u> as more clay
-                                gets trough the intervals, even tough
-                                the force delivered remains unchanged,
-                                become longer because of clay’s own
-                                weight; alligment of the piston is not
-                                always vertical, because the hammer and
-                                the machine are two saperate pieces -
-                                hammer’s head does not always land with
-                                its centre on the piston (anomalities in
-                                the cylinder and in shape of pistons head
-                                also contribute to the movement of the
-                                piston)
+                                Each is made of a body (usually cylinder, 
+                                sometimes a box) which has legs attached on 
+                                the sides and a mold on the bottom that 
+                                determines how the piece (i. e. product) is formed. 
+                                Body is filled with clay then a piston is placed on 
+                                top. I hit the piston with a hammer and with every 
+                                impact clay is extruded out of the cylinder in intervals. 
                                 <br>
-                                --> Original idea was later abandoned
-                                due to probleems listed above. I focused
-                                more on the creation of different machines
-                                and exploration of possibilites
-                                to create different products: changing
-                                the diameter or even shape of container,
-                                changing the mould on the bottom etc.
+                                -> Original idea was abandoned due to problems listed below. I focused more on the creation of different devices (five in total) and exploration of possibilites to create different products: changing the diameter or even shape of container, changing the mould on the bottom  etc. 
+                                <br>
+                                Problems I did not forsee: 
+                                -as more clay gets extruded the intervals, even tough the force delivered remains unchanged,  become longer because of clay’s own weight;
+                                -position of the piston is not always vertical because it’s “fixed” to the body only with its head; upper part is not  touching anything so it starts to lean. Because of this it has to be constantly checked and moved into correct position.
+                                -device and hammer are both saperate units; device moves out of center of impact with each hit and also needs to be reppositioned frequently.
                                 <br>
                                 <h1>Second phase</h1>
                                 <h2>October 2019, Belgrade, Serbia</h2>
-                                How to get rid of the problems?
-                                New machine - just one machine with
-                                possibility of changing moulds. Laser 
-                                cut! A guide to hold the piston in vertical
-                                position (interractive piece?) 
+                                Second phase is an upgrade of the first 
+                                one as I had focused on the aestethics 
+                                of the device and elimination of the problems 
+                                which occured before. 
                                 <br>
-                                New hammer - made to be screwed onto 
-                                the machine so they become one whole. 
-                                (eliminates problem of machine going
-                                away from the “impact field”). Posibillity 
-                                of removeable legs - easier transport.
+                                There is only one device now instead of 
+                                five - this was made possible by welding a 
+                                laser-cut “head” onto the bottomside of the 
+                                cylinder (i.e. body); triangular head has a 
+                                hole cut in the center with the same diameter 
+                                as the body’s inside so clay can easily pass 
+                                trough; around it there are three holes for 
+                                the screws. To create different shapes laser-cut 
+                                mounts are attached onto the head with the screws.
+                                Also problem with piston leaning in and whole 
+                                device moving out of the zone of hammer’s 
+                                impact is solved. For piston a guide is 
+                                placed on top of the body, thus creating 
+                                second fixed point (first is piston’s head) 
+                                that keeps it always in vertical position; 
+                                to keep the device in one place, new hammer 
+                                was made which has  legs that attatch to the 
+                                legs of the device so they become connected.
+
 
                             </p>
-                            <button class="tabLinks" onclick="openTab(event, 'work')" ><<</button>
+                            <button class="tabLinks" data-target="#work"><<</button>
                         </div>
-                        <div class="tabContent" id="project2">
-                            <p>Živijo</p>
-                            <button class="tabLinks" onclick="openTab(event, 'work')"><<</button>
+                        <div class="tabContent project2">
+                            <p> 
+                                “The Great scraping device #1”
+                                <br><br>
+                                clay in my left, <br>
+                                spatula in my right <br>   
+                                my mind, somwhere else, <br>
+                                gentle strokes <br>
+                                mointains emerge <br>
+                                <br>
+                                The great scraping device #1” 
+                                is a prototipe device which uses 
+                                a blade set under an angle to 
+                                scratch clay in thin layers. 
+                                It consists of metal framework, 
+                                a box for the clay with no top 
+                                side and with a bottom one that 
+                                moves up and down with the 
+                                rotation of the screw beneath. 
+                                On the top of the framework are 
+                                two rails on which a 4 wheel 
+                                plate is placed. on te front of 
+                                the plate a blade is attached. 
+                                <br>
+                                Clay is carefully placed into 
+                                the box, so there is no air pockets, 
+                                then it is raised untill the blade 
+                                touches it - now it is set, plate is 
+                                then pushed away from the box, clay 
+                                is raised to desired height and a 
+                                cut/scratch is made. Whit each cut/scratch 
+                                clay starts to build up forming different 
+                                textures depending on how much clay was 
+                                raised between each cut/scratch.
+                            </p>
+                            <button class="tabLinks" data-target="#work"><<</button>
 
                         </div>
                 </div>
@@ -105,7 +144,7 @@
             </div>
 
             <div class="columnPhoto"> 
-                <div id="project1-img" class="tabContent">
+                <div class="tabContent project1 img">
                     <div class="column">
                         <img src="/build/images/3.JPG" alt="Project #1">
                         <img src="" alt="Project #1">

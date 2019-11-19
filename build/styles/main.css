@@ -3,7 +3,7 @@ html {
 }
 
 @font-face {
-  font-family: "Crimson Text", serif;
+  font-family: "Crimson Text";
   src: url("https://fonts.googleapis.com/css?family=Crimson+Text&display=swap");
 }
 h1 {
@@ -76,6 +76,10 @@ h2 {
   background-color: inherit;
 }
 
+.active {
+  display: block;
+}
+
 body {
   font-family: "Crimson Text", serif;
   color: #444444;
@@ -99,6 +103,7 @@ body {
   background-color: white;
   height: 100%;
   padding: 1%;
+  min-width: 180px;
 }
 
 .main {
@@ -129,7 +134,6 @@ body {
   color: #444444;
   font-family: "Crimson Text", serif;
   text-align: left;
-  padding: none;
 }
 
 .columnPhoto {
