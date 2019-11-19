@@ -11,8 +11,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 else {
                     content.classList.remove("active"); 
                 }
-                console.log(content)
-
             });
         }
     });

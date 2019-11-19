@@ -3,7 +3,7 @@ html {
 }
 
 @font-face {
-  font-family: "Crimson Text";
+  font-family: "Crimson Text", serif;
   src: url("https://fonts.googleapis.com/css?family=Crimson+Text&display=swap");
 }
 h1 {
@@ -69,8 +69,8 @@ h2 {
 
 .tabContent {
   display: none;
+  float: left;
   animation: fadeEffect 1.2s;
-  float: inherit;
   height: inherit;
   text-align: inherit;
   background-color: inherit;
@@ -81,76 +81,63 @@ h2 {
 }
 
 body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
   font-family: "Crimson Text", serif;
   color: #444444;
-  height: 100%;
   line-height: 0.8;
-  overflow: hidden;
 }
 
 * {
   box-sizing: border-box;
 }
 
+.body {
+  overflow: scroll;
+}
+
 .row {
   display: flex;
-  flex-wrap: wrap;
-  height: 100%;
 }
 
 .side {
-  flex-basis: 18%;
+  flex-basis: 160px;
+  min-width: 160px;
   background-color: white;
-  height: 100%;
-  padding: 1%;
-  min-width: 180px;
 }
 
 .main {
-  flex: 1;
-  height: 100%;
-  background-color: white;
-  display: flex;
+  float: auto;
 }
 
-.columnText {
-  float: left;
-  height: 100%;
-  flex-basis: 300px;
-  font-size: 90%;
-  line-height: 1;
-  padding: 1%;
-  background-color: white;
+.projectContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text {
+  flex-basis: 25%;
+  max-width: 25%;
+  min-width: 150px;
+  top-margin: 0px;
   overflow: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
+  font-size: 90%;
+  line-height: 1;
 }
 
-.columnText::-webkit-scrollbar {
+.text::-webkit-scrollbar {
   display: none;
 }
 
-.projectContent, .aboutContent {
-  color: #444444;
-  font-family: "Crimson Text", serif;
-  text-align: left;
+.images {
+  flex: 25%;
+  max-width: 25%;
 }
-
-.columnPhoto {
-  flex: 1;
-  float: right;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  background: white;
-}
-
-.column {
-  flex: 33%;
-  max-width: 33%;
-}
-
-.column img {
+.images img {
   vertical-align: middle;
   width: 100%;
 }
@@ -161,9 +148,9 @@ body {
   clear: both;
 }
 
-@media screen and (max-width: 700px) {
-  .body {
-    overflow: scroll;
+@media screen and (max-width: 850px) {
+  body {
+    overflow: auto;
   }
 
   .row {
@@ -176,13 +163,9 @@ body {
     flex-basis: 100px;
   }
 
-  .main {
-    flex-direction: column;
-  }
-
-  .columnText, .columnPhoto {
+  .projectContent {
+    height: auto;
     width: 100%;
-    padding: 1%;
   }
 }
 
