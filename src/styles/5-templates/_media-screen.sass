@@ -3,16 +3,30 @@
         overflow: auto
 
     .row
+        display: flex
         flex-direction: column
         height: auto
         width: 100%
 
     .side
-        flex-basis: 100px
+        flex: auto
+        
+    .main
+        flex: auto
 
     .projectContent
-        height: auto
+        flex-direction: column
         width: 100%
+
+    .text
+        overflow-y: visible
+    
+    .images
+        -ms-flex: 33%
+        flex: 33%
+        max-width: 33%
+        height: auto
+    
   
 
    

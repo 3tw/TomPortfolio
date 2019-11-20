@@ -84,6 +84,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
+  overflow: hidden;
   font-family: "Crimson Text", serif;
   color: #444444;
   line-height: 0.8;
@@ -113,6 +114,7 @@ body {
 }
 
 .projectContent {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -138,8 +140,9 @@ body {
   flex: 20%;
 }
 .images img {
-  vertical-align: middle;
   width: 100%;
+  object-fit: cover;
+  vertical-align: middle;
   padding: 0.5%;
 }
 
@@ -159,18 +162,37 @@ body {
   }
 
   .row {
+    display: flex;
     flex-direction: column;
     height: auto;
     width: 100%;
   }
 
   .side {
-    flex-basis: 100px;
+    flex: auto;
+  }
+
+  .main {
+    flex: auto;
   }
 
   .projectContent {
-    height: auto;
+    flex-direction: column;
     width: 100%;
+  }
+
+  .text {
+    overflow-y: visible;
+  }
+
+  .images {
+    flex: 33%;
+  }
+  .images img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    padding: 0.5%;
   }
 }
 
