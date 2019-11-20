@@ -84,7 +84,6 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-  overflow: scroll;
   font-family: "Crimson Text", serif;
   color: #444444;
   line-height: 0.8;
@@ -96,29 +95,35 @@ body {
 
 .row {
   display: flex;
+  height: 100%;
+  overflow: hidden;
 }
 
 .side {
-  flex-basis: 160px;
-  min-width: 160px;
+  flex: 0 0 160px;
   background-color: white;
+  overflow: hidden;
 }
 
 .main {
-  float: auto;
+  float: left;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
 }
 
 .projectContent {
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
+  overflow: hidden;
 }
 
 .text {
   float: left;
-  flex-basis: 25%;
-  max-width: 25%;
+  flex: 0 0 250px;
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
   font-size: 90%;
@@ -130,12 +135,16 @@ body {
 }
 
 .images {
-  flex: 25%;
-  max-width: 25%;
+  flex: 20%;
 }
 .images img {
   vertical-align: middle;
   width: 100%;
+  padding: 0.5%;
+}
+
+#about {
+  width: 200px;
 }
 
 .main:after {

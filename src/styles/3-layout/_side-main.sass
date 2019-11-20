@@ -3,24 +3,32 @@
 
 .row
     display: flex
+    height: 100%
+    overflow: hidden
+
 .side
-    flex-basis: 160px
-    min-width: 160px
+    flex: 0 0 160px
     background-color: $background-color
+    overflow: hidden
+
 .main
-    float: auto
+    float: left
+    display: flex
+    height: 100%
+    overflow: hidden
 
 .projectContent
     display: flex
     flex-wrap: wrap
+    height: 100%
+    overflow: hidden
 
 .text
     float: left
-    flex-basis: 25%
-    max-width: 25%
+    flex: 0 0 250px
     height: 100%
 
-    overflow: scroll // doesnt workk
+    overflow-y: scroll
     -ms-overflow-style: none
     overflow: -moz-scrollbars-none
     font-size: 90%
@@ -30,12 +38,14 @@
     display: none
 
 .images
-    flex: 25%
-    max-width: 25%
-
+    flex: 20%
     img
         vertical-align: middle
         width: 100%
+        padding: 0.5%
+
+#about
+    width: 200px
 
 .main:after
     content: " "

@@ -10,8 +10,13 @@
 
 > add eventListener (unobtrusive java) //
 
+
+> slike -- preview enaki kvadrati? 
+    -->LR obreži in naredi enotne filtre
+
+    > obrni slike (mogoče ne bo veš potrebno?)
+
 > media-screen slike pod text 
-> slike -- preview enaki kvadrati?
-> obrni slike 
-> fiksiraj tekst
-> scroll za text only
+
+> fiksiraj tekst //
+> scroll za text only //
