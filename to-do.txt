@@ -8,12 +8,10 @@
 
 > padding for projects //
 
-> spodaj razmak pri mozzili v projectcontent
-
 > add eventListener (unobtrusive java) //
 
-> prikaže slike in text v projektu (problem .querySelector all 
-skozi forEachMethod začne delati loope ki negirajo prvi data-target 
-in bodisi ne zaprejo indexa
-bodisi odprejo slike in zaprejo text
-)
+> media-screen slike pod text 
+> slike -- preview enaki kvadrati?
+> obrni slike 
+> fiksiraj tekst
+> scroll za text only
