@@ -98,10 +98,12 @@ body {
   display: flex;
   height: 100%;
   overflow: hidden;
+  margin: 30px;
+  margin-top: 30px;
 }
 
 .side {
-  flex: 0 0 160px;
+  flex: 0 0 200px;
   background-color: white;
   overflow: hidden;
 }
@@ -110,6 +112,7 @@ body {
   float: left;
   display: flex;
   height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -118,6 +121,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -126,6 +130,7 @@ body {
   text-align: justify;
   flex: 0 0 250px;
   height: 100%;
+  padding-bottom: 5%;
   overflow-y: scroll;
   -ms-overflow-style: none;
   overflow: -moz-scrollbars-none;
@@ -142,7 +147,7 @@ body {
   display: flex;
   max-width: 635px;
   padding: 2%;
-  margin: auto;
+  margin-right: auto;
   overflow: hidden;
 }
 
@@ -170,41 +175,57 @@ body {
 
 @media screen and (max-width: 800px) {
   body {
-    overflow: auto;
+    overflow-y: auto;
   }
 
   .row {
-    display: flex;
     flex-direction: column;
     height: auto;
-    width: 100%;
+    width: 100vw;
+    margin-left: -2%;
+    margin-top: 1%;
   }
 
   .side {
     flex: auto;
+    width: 100vw;
+    margin: 2%;
   }
 
   .main {
     flex: auto;
-    width: 100%;
-    padding: 2%;
+    width: inherit;
+    margin: 2%;
+    margin-top: 0%;
   }
 
   .projectContent {
     flex-direction: column;
-    width: 100%;
+    width: inherit;
   }
 
   .text {
     overflow-y: visible;
-    width: 620px;
+    width: inherit;
+    margin: 2%;
+    margin-top: 0;
   }
 
-  .images {
-    -ms-flex: 33%;
-    flex: 33%;
-    max-width: 33%;
-    height: auto;
+  .imgBox {
+    flex: 1;
+    display: flex;
+    max-width: 567px;
+    padding: 2%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .images img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    vertical-align: middle;
+    padding: 0.5%;
   }
 }
 
