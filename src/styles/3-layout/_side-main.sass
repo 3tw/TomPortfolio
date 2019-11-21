@@ -26,25 +26,40 @@
 
 .text
     float: left
+    text-align: justify
     flex: 0 0 250px
     height: 100%
 
     overflow-y: scroll
     -ms-overflow-style: none
     overflow: -moz-scrollbars-none
+
     font-size: 90%
     line-height: 1
 
 .text::-webkit-scrollbar
     display: none
 
+.imgBox
+    flex: 1
+    display: flex
+    max-width: 635px
+    padding: 2%
+    margin: auto
+    
+    overflow: hidden
+ 
 .images
-    flex: 20%
+    flex-basis: 33%
+    display: block
+
     img
-        width: 100%
+        width: 200px
+        height: 200px
         object-fit: cover
         vertical-align: middle
         padding: 0.5%
+
 
 #about
     width: 200px
