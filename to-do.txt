@@ -10,10 +10,13 @@
 
 > add eventListener (unobtrusive java) //
 
-
-> obrni slike 
-
 > media-screen slike pod text //
 
 > fiksiraj tekst //
 > scroll za text only //
+
+> contact me section?
+
+> footer
+
+> media-screen
