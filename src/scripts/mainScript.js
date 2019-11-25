@@ -1,3 +1,5 @@
+//buttons listener
+
 document.addEventListener('DOMContentLoaded', function () {
     const tabContents = document.querySelectorAll(".tabContent");
 
@@ -14,5 +16,14 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+
+
+
+
+//image loading animaiton; add random order and for bot projects
+
+    $('.imagesP1').imagesLoaded().always(function(instance) {
+        $(".imagesP1").css("display", "block");
+      });
 
 });

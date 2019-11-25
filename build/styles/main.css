@@ -1,3 +1,14 @@
+@keyframes fadeEffect {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 html {
   position: fixed;
   min-width: 100vw;
@@ -23,17 +34,6 @@ h2 {
   line-height: inherit;
 }
 
-@keyframes fadeEffect {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.7;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .side button {
   display: block;
   background-color: inherit;
@@ -69,13 +69,13 @@ h2 {
 }
 
 .projectContent button {
-  font-size: 115%;
+  font-size: 110%;
 }
 
 .tabContent {
   display: none;
   float: left;
-  animation: fadeEffect 1.2s;
+  animation: fadeEffect 1s;
   height: inherit;
   text-align: inherit;
   background-color: inherit;
@@ -167,7 +167,7 @@ footer {
 
 .images {
   flex-basis: 33%;
-  display: block;
+  display: hidden;
 }
 .images img {
   width: 200px;
@@ -177,7 +177,7 @@ footer {
   padding: 0.1em;
 }
 
-#about {
+#abouts {
   width: 200px;
 }
 

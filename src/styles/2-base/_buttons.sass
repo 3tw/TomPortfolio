@@ -1,11 +1,3 @@
-@keyframes fadeEffect
-    0%
-        opacity: 0
-    40%
-        opacity: 0.7
-    100%
-        opacity: 1
-
 .side button /* tabs */
     display: block
     background-color: inherit
@@ -22,7 +14,7 @@
 .side button:hover
     color: #e6e4e4 
 
-.side button.active
+.side button.active //doesn't work
     color: gray 
 
 .main button /* projects*/
@@ -37,12 +29,12 @@
     outline: none
 
 .projectContent button /* arrows*/
-    font-size: 115%
+    font-size: 110%
 
 .tabContent
     display: none
     float: left
-    animation: fadeEffect 1.2s
+    animation: fadeEffect 1s
     height: inherit
     text-align: inherit
     background-color: inherit

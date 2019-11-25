@@ -17,6 +17,6 @@
 
 > contact me section?
 
-> footer
+> footer se ne prikaže
 
-> media-screen
+> media-screen //
