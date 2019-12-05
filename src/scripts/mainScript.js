@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-//image loading animaiton; add random order and for bot projects
+//load images all at once -- doesn't work
 
-    $('.imagesP1').imagesLoaded().always(function(instance) {
-        $(".imagesP1").css("display", "block");
-      });
+    //$('.imagesP1').imagesLoaded().always(function(instance) {
+    //    $(".imagesP1").css("display", "block");
+    //});
 
 });

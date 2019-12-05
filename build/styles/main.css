@@ -152,6 +152,9 @@ footer {
   font-size: 90%;
   line-height: 1;
 }
+.text p {
+  margin-top: 0px;
+}
 
 .text::-webkit-scrollbar {
   display: none;
@@ -177,7 +180,7 @@ footer {
   padding: 0.1em;
 }
 
-#abouts {
+#about {
   width: 200px;
 }
 
