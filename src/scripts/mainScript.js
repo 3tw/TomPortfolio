@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
             const targetContent = document.querySelector(e.target.dataset.target);
             tabContents.forEach(function(content) {
                 if (content == targetContent) {
-                    content.classList.add("active"); 
+                    let targetId = targetContent.getAttribute("id")
+                        content.classList.add("active");
                 } 
                 else {
                     content.classList.remove("active"); 
@@ -17,13 +18,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-
-
-
-//load images all at once -- doesn't work
-
-    //$('.imagesP1').imagesLoaded().always(function(instance) {
-    //    $(".imagesP1").css("display", "block");
-    //});
 
 });

@@ -10,6 +10,7 @@
     border: none
     outline: none
     transition: 0.5s
+    padding: 0
 
 .side button:hover
     color: #e6e4e4 
@@ -17,13 +18,13 @@
 .side button.active //doesn't work
     color: gray 
 
-.main button /* projects*/
+.main button /* project buttons*/
     display: block
     background-color: inherit
     color: $text-color
     font-family: $main-font
     font-size: 140%
-    line-height: 0.9em
+    line-height: 1.1em
     cursor: pointer
     border: none
     outline: none
@@ -33,11 +34,14 @@
 
 .tabContent
     display: none
-    float: left
     animation: fadeEffect 1s
     height: inherit
     text-align: inherit
     background-color: inherit
+    width: 100%
+
+    grid-column-start: 1
+    grid-column-end: 4
 
 .active
     display: block

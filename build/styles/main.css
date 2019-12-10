@@ -11,7 +11,8 @@
 }
 html {
   position: fixed;
-  min-width: 100vw;
+  min-width: 100%;
+  height: 100%;
   top: 0;
   bottom: 0;
   left: 0;
@@ -46,6 +47,7 @@ h2 {
   border: none;
   outline: none;
   transition: 0.5s;
+  padding: 0;
 }
 
 .side button:hover {
@@ -62,7 +64,7 @@ h2 {
   color: #444444;
   font-family: "Crimson Text", serif;
   font-size: 140%;
-  line-height: 0.9em;
+  line-height: 1.1em;
   cursor: pointer;
   border: none;
   outline: none;
@@ -74,11 +76,13 @@ h2 {
 
 .tabContent {
   display: none;
-  float: left;
   animation: fadeEffect 1s;
   height: inherit;
   text-align: inherit;
   background-color: inherit;
+  width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 .active {
@@ -88,71 +92,81 @@ h2 {
 body {
   padding: 0;
   margin: 0;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
   font-family: "Crimson Text", serif;
   color: #444444;
   line-height: 0.8;
 }
 
-footer {
-  position: relative;
-  width: 100%;
-  display: block;
-  text-align: right;
-  font-size: 8px;
-  margin-top: 10px;
-  max-width: 1490px;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+.footer {
+  grid-area: footer;
+  font-size: 9px;
+  justify-self: end;
+  align-self: end;
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
 }
 
 .row {
-  display: flex;
-  height: 94%;
+  display: grid;
+  grid-template-columns: 160px 1fr 1fr 1fr;
+  grid-template-rows: auto 20px;
+  grid-template-areas: "side main main main" " . . . footer";
   overflow: hidden;
-  margin: 1.5em;
+  justify-items: stretch;
+  align-content: stretch;
+  padding: 1em;
+  height: 100%;
+  width: 100%;
 }
 
 .side {
-  flex: 0 0 200px;
-  background-color: white;
+  grid-area: side;
   overflow: hidden;
 }
 
 .main {
-  float: left;
-  display: flex;
-  height: 100%;
-  width: 100%;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   overflow: hidden;
+}
+
+.main > button {
+  justify-self: start;
+}
+
+#about {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  line-height: 1;
 }
 
 .projectContent {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "text images";
+  height: 93vh;
 }
 
 .text {
-  float: left;
-  text-align: justify;
-  flex: 0 0 250px;
-  height: 99%;
+  grid-area: text;
   overflow-y: scroll;
   -ms-overflow-style: none;
-  overflow: -moz-scrollbars-none;
   font-size: 90%;
-  line-height: 1;
+  height: calc(90vh + 10px);
+  line-height: 1.1em;
+  padding-right: 10px;
 }
-.text p {
+
+.onTop {
   margin-top: 0px;
 }
 
@@ -161,27 +175,18 @@ footer {
 }
 
 .imgBox {
-  flex: 1;
-  display: flex;
-  max-width: 633px;
-  padding: 0 1em;
+  grid-area: images;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 30vh);
+  grid-template-rows: repeat(3, 30vh);
+  grid-gap: 5px;
 }
 
-.images {
-  flex-basis: 33%;
-  display: hidden;
-}
-.images img {
-  width: 200px;
-  height: 200px;
+.imgBox > img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  vertical-align: middle;
-  padding: 0.1em;
-}
-
-#about {
-  width: 200px;
 }
 
 .main:after {

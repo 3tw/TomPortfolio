@@ -17,6 +17,8 @@
 
 > contact me section?
 
-> footer se ne prikaže
+> footer se ne prikaže //
 
-> media-screen //
+> media-screen  FIX
+
+> footer relocate?
