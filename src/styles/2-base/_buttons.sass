@@ -4,7 +4,7 @@
     color: $text-color
     font-family: $main-font
     font-size: 150%
-    line-height: 0.9em
+    line-height: 1.1em
     text-align: left
     cursor: pointer
     border: none
@@ -19,7 +19,6 @@
     color: gray 
 
 .main button /* project buttons*/
-    display: block
     background-color: inherit
     color: $text-color
     font-family: $main-font
@@ -28,6 +27,15 @@
     cursor: pointer
     border: none
     outline: none
+
+#work > button
+    display: block
+
+.bigScreenArrow, .smallScreenArrow
+    display: none
+
+.smallScreenArrow
+    padding: 1em 0em 1em 0em
 
 .projectContent button /* arrows*/
     font-size: 110%
@@ -45,3 +53,4 @@
 
 .active
     display: block
+

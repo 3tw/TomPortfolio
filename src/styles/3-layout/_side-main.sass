@@ -4,13 +4,13 @@
 
 .row
     display: grid
-    grid-template-columns: 160px 1fr 1fr 1fr
-    grid-template-rows: auto 20px
+    grid-template-columns: 10em 1fr 1fr 1fr
+    grid-template-rows: 1fr //change to two for footer
     grid-template-areas: "side main main main" " . . . footer"
     overflow: hidden
     justify-items: stretch
     align-content: stretch
-    padding: 1em
+    padding: 2em 1em 1em 3em
     height: 100%
     width: 100%
 
@@ -32,10 +32,11 @@
     grid-column-start: 1
     grid-column-end: 2
     line-height: 1
+    font-size: 90%
 
 .projectContent
     display: grid
-    grid-template-columns: 300px 1fr 
+    grid-template-columns: 18em 1fr 
     grid-template-rows: 1fr 
     grid-template-areas: "text images"
     height: 93vh //not ideal solution

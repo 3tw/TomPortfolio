@@ -19,6 +19,10 @@
 
 > footer se ne prikaže //
 
-> media-screen  FIX
+> media-screen //
 
-> footer relocate?
+> footer relocate? 
+
+> premakni arrow button na dno?
+
+> hide nav bar

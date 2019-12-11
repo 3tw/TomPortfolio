@@ -41,7 +41,7 @@ h2 {
   color: #444444;
   font-family: "Crimson Text", serif;
   font-size: 150%;
-  line-height: 0.9em;
+  line-height: 1.1em;
   text-align: left;
   cursor: pointer;
   border: none;
@@ -59,7 +59,6 @@ h2 {
 }
 
 .main button {
-  display: block;
   background-color: inherit;
   color: #444444;
   font-family: "Crimson Text", serif;
@@ -68,6 +67,18 @@ h2 {
   cursor: pointer;
   border: none;
   outline: none;
+}
+
+#work > button {
+  display: block;
+}
+
+.bigScreenArrow, .smallScreenArrow {
+  display: none;
+}
+
+.smallScreenArrow {
+  padding: 1em 0em 1em 0em;
 }
 
 .projectContent button {
@@ -114,13 +125,13 @@ body {
 
 .row {
   display: grid;
-  grid-template-columns: 160px 1fr 1fr 1fr;
-  grid-template-rows: auto 20px;
+  grid-template-columns: 10em 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas: "side main main main" " . . . footer";
   overflow: hidden;
   justify-items: stretch;
   align-content: stretch;
-  padding: 1em;
+  padding: 2em 1em 1em 3em;
   height: 100%;
   width: 100%;
 }
@@ -146,11 +157,12 @@ body {
   grid-column-start: 1;
   grid-column-end: 2;
   line-height: 1;
+  font-size: 90%;
 }
 
 .projectContent {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 18em 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "text images";
   height: 93vh;
@@ -196,52 +208,50 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  body,
-.main {
-    overflow-y: scroll;
+  body {
+    overflow-y: hidden;
     overflow-x: hidden;
-    width: 100%;
   }
 
   .row {
-    flex-direction: column;
+    grid-template-areas: "side" "main" "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content auto;
+    padding: 2em;
   }
 
-  .side {
-    flex: 0 0 90px;
+  .main {
+    padding-top: 0.5em;
   }
 
   .projectContent {
-    flex-direction: column;
-    overflow-y: scroll;
-    height: auto;
+    display: block;
+    height: calc(100vh - 170px);
+    overflow: scroll;
   }
-  .projectContent button {
-    display: none;
+
+  #about {
+    grid-column-start: 1;
+    grid-column-end: 4;
   }
 
   .text {
-    overflow: visible;
-    width: 100%;
-    padding-left: 0.5em;
+    overflow: hidden;
+    height: auto;
+    padding: 0 0 1em;
   }
 
   .imgBox {
+    grid-area: images;
     overflow: hidden;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .images {
     width: 100%;
     display: block;
   }
-  .images img {
-    object-fit: cover;
-    vertical-align: middle;
+
+  .imgBox > img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
