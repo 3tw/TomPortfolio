@@ -50,14 +50,6 @@ h2 {
   padding: 0;
 }
 
-.side button:hover {
-  color: #e6e4e4;
-}
-
-.side button.active {
-  color: gray;
-}
-
 .main button {
   background-color: inherit;
   color: #444444;
@@ -67,6 +59,14 @@ h2 {
   cursor: pointer;
   border: none;
   outline: none;
+}
+
+.main button:hover, .side button:hover {
+  color: #e6e4e4;
+}
+
+.main button:active, .side button.active {
+  color: gray;
 }
 
 #work > button {
@@ -170,10 +170,10 @@ body {
 
 .text {
   grid-area: text;
+  height: calc(90vh + 10px);
   overflow-y: scroll;
   -ms-overflow-style: none;
   font-size: 90%;
-  height: calc(90vh + 10px);
   line-height: 1.1em;
   padding-right: 10px;
 }
@@ -188,11 +188,16 @@ body {
 
 .imgBox {
   grid-area: images;
-  overflow: hidden;
+  overflow: scroll;
+  -ms-overflow-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 30vh);
-  grid-template-rows: repeat(3, 30vh);
+  grid-template-columns: repeat(auto-fill, 20vh);
+  grid-auto-rows: 20vh;
   grid-gap: 5px;
+}
+
+.imgBox::-webkit-scrollbar {
+  display: none;
 }
 
 .imgBox > img {
@@ -207,7 +212,7 @@ body {
   clear: both;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   body {
     overflow-y: hidden;
     overflow-x: hidden;

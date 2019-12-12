@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const targetContent = document.querySelector(e.target.dataset.target);
             tabContents.forEach(function(content) {
                 if (content == targetContent) {
-                        content.classList.add("active");
+                    content.classList.add("active");
                 } 
                 else {
                     content.classList.remove("active"); 
@@ -18,32 +18,38 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     //"move" arrow buttons
-    const smallScreen = window.matchMedia("(max-width: 800px")
 
-    smallScreen.addListener(function() {
+    //media queries
+
+    if (matchMedia){
+        const smallScreen = window.matchMedia("(max-width: 850px)");
+        smallScreen.addListener(moveArrows);
+        moveArrows(smallScreen);
+
+    }
+
+    //moving function
+
+    function moveArrows(smallScreen) {
         const bigArrows = document.querySelectorAll(".bigScreenArrow");
-        const smallArrows = document.querySelectorAll(".smallScreenArrow")
-        if (smallScreen.matches) {
-            bigArrows.forEach(function(button) {
-                button.classList.remove("active")
-            });
-            smallArrows.forEach(function(button2) {
-                button2.classList.add("active")
-                console.log(button2)
-            })
-        } else {
-            bigArrows.forEach(function(button) {
-                button.classList.add("active")
-            });
-            smallArrows.forEach(function(button2) {
-                button2.classList.remove("active")
-                console.log(button2)
-
-            })
-        }
-    });
-
-
-
+        const smallArrows = document.querySelectorAll(".smallScreenArrow");
+        
+        bigArrows.forEach(function(button){
+            if (smallScreen.matches) {
+                button.classList.remove("active");
+            } 
+            else {
+                button.classList.add("active");
+            }
+        });
+        smallArrows.forEach(function(button2){
+            if (smallScreen.matches) {
+                button2.classList.add("active");
+            }
+            else {
+                button2.classList.remove("active");
+            }
+        });
+    }
 
 });

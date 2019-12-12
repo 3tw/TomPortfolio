@@ -12,12 +12,6 @@
     transition: 0.5s
     padding: 0
 
-.side button:hover
-    color: #e6e4e4 
-
-.side button.active //doesn't work
-    color: gray 
-
 .main button /* project buttons*/
     background-color: inherit
     color: $text-color
@@ -27,6 +21,11 @@
     cursor: pointer
     border: none
     outline: none
+    
+.main button:hover, .side button:hover
+    color: #e6e4e4 
+.main button:active, .side button.active
+    color: gray
 
 #work > button
     display: block

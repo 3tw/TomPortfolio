@@ -44,12 +44,12 @@
     
 .text
     grid-area: text
+    height: calc(90vh + 10px)
 
     overflow-y: scroll
     -ms-overflow-style: none
 
     font-size: 90%
-    height: calc(90vh + 10px)
     line-height: 1.1em
     padding-right: 10px
 
@@ -62,11 +62,17 @@
 
 .imgBox
     grid-area: images
-    overflow: hidden
+
+    overflow: scroll
+    -ms-overflow-style: none
+
     display: grid
-    grid-template-columns: repeat(3, 30vh)
-    grid-template-rows: repeat(3, 30vh)
+    grid-template-columns: repeat(auto-fill, 20vh)
+    grid-auto-rows: 20vh
     grid-gap: 5px
+
+.imgBox::-webkit-scrollbar
+    display: none
     
 .imgBox > img
     width: 100%
