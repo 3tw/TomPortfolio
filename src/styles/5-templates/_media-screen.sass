@@ -1,37 +1,47 @@
+@media screen and (max-width: 450px)
+    .side > button
+        width: 100%
+    .main button
+        width: 100%
+
 @media screen and (max-width: 850px)
     body
         overflow-y: hidden
         overflow-x: hidden
 
     .row
-        grid-template-areas: "side" "main" "footer"
+        grid-template-areas: "side" "main"
         grid-template-columns: 1fr
-        grid-template-rows: min-content auto
+        grid-template-rows: min-content min-content
         padding: 2em
 
     .main
         padding-top: 0.5em
-
+    
     .projectContent
-        display: block
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(2, max-content)
+        grid-template-areas: "text" "images"
         height: calc(100vh - 170px) 
         overflow: scroll
+        margin-top: 1em
+
+    .text
+        overflow: hidden
+        height: auto
+        padding: 0 0 1em
         
     
     #about
         grid-column-start: 1
         grid-column-end: 4
     
-    .text
-        overflow: hidden
-        height: auto
-        padding: 0 0 1em
-
     .imgBox
         grid-area: images
         overflow: hidden
         width: 100%
-        display: block
+        grid-template-columns: 1fr
+        grid-auto-rows: 1fr
     
     .imgBox > img
         width: 100%

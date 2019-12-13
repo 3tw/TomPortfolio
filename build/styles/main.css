@@ -17,6 +17,7 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -42,7 +43,6 @@ h2 {
   font-family: "Crimson Text", serif;
   font-size: 150%;
   line-height: 1.1em;
-  text-align: left;
   cursor: pointer;
   border: none;
   outline: none;
@@ -65,7 +65,7 @@ h2 {
   color: #e6e4e4;
 }
 
-.main button:active, .side button.active {
+.main button:active, .side button:active {
   color: gray;
 }
 
@@ -149,10 +149,6 @@ body {
   overflow: hidden;
 }
 
-.main > button {
-  justify-self: start;
-}
-
 #about {
   grid-column-start: 1;
   grid-column-end: 2;
@@ -170,7 +166,7 @@ body {
 
 .text {
   grid-area: text;
-  height: calc(90vh + 10px);
+  height: 90vh;
   overflow-y: scroll;
   -ms-overflow-style: none;
   font-size: 90%;
@@ -212,6 +208,15 @@ body {
   clear: both;
 }
 
+@media screen and (max-width: 450px) {
+  .side > button {
+    width: 100%;
+  }
+
+  .main button {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 850px) {
   body {
     overflow-y: hidden;
@@ -219,9 +224,9 @@ body {
   }
 
   .row {
-    grid-template-areas: "side" "main" "footer";
+    grid-template-areas: "side" "main";
     grid-template-columns: 1fr;
-    grid-template-rows: min-content auto;
+    grid-template-rows: min-content min-content;
     padding: 2em;
   }
 
@@ -230,14 +235,12 @@ body {
   }
 
   .projectContent {
-    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: "text" "images";
     height: calc(100vh - 170px);
     overflow: scroll;
-  }
-
-  #about {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    margin-top: 1em;
   }
 
   .text {
@@ -246,11 +249,17 @@ body {
     padding: 0 0 1em;
   }
 
+  #about {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
   .imgBox {
     grid-area: images;
     overflow: hidden;
     width: 100%;
-    display: block;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
   }
 
   .imgBox > img {

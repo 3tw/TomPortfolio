@@ -6,6 +6,12 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener("click", function(e) {
         if (e.target.tagName == "BUTTON") {
             const targetContent = document.querySelector(e.target.dataset.target);
+            const scrollDiv = document.querySelectorAll(".scroll");
+
+            scrollDiv.forEach (function(div){
+                div.scrollTop = 0;
+            });
+            
             tabContents.forEach(function(content) {
                 if (content == targetContent) {
                     content.classList.add("active");
