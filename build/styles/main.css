@@ -187,8 +187,8 @@ body {
   overflow: scroll;
   -ms-overflow-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 20vh);
-  grid-auto-rows: 20vh;
+  grid-template-columns: repeat(auto-fill, 15vw);
+  grid-auto-rows: 15vw;
   grid-gap: 5px;
 }
 
@@ -215,6 +215,23 @@ body {
 
   .main button {
     width: 100%;
+  }
+
+  .text, #about {
+    text-align: justify;
+    padding-bottom: 0em;
+  }
+
+  .poem {
+    text-align: center;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  .onTop {
+    padding-top: 0.5em;
   }
 }
 @media screen and (max-width: 850px) {
@@ -246,7 +263,7 @@ body {
   .text {
     overflow: hidden;
     height: auto;
-    padding: 0 0 1em;
+    padding: 0em;
   }
 
   #about {
