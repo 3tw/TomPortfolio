@@ -7,23 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Winkler Tom</title>
     <link rel="stylesheet" href="styles/main.css">
-    
+     <!--font awesome icons-->
+     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 
 <body>
     <div class="row">
         <!--Navigation Buttons-->
         <div class="side tabLinks">
-            <button data-target="#default">Tom Winkler</button>
-            <button data-target="#work">Work</button>
-            <button data-target="#about">About</button>
+            <button class="button" data-target="#default">Tom Winkler</button>
+            <button class="button" data-target="#work">Work</button>
+            <button class="button" data-target="#about">About</button>
         </div>
         <!--Main FlexBox-->
 
         <div class="main">
             <div class="tabContent tabLinks" id="work">
-                <button data-target="#project1">project#1</button>
-                <button data-target="#project2">project#2</button>
+                <button class="button" data-target="#project1">project#1</button>
+                <button class="button" data-target="#project2">project#2</button>
             </div>
             <!--Project1-->
 
@@ -102,27 +103,27 @@
                             was made which has legs that attatch to the
                             legs of the device so they become connected.
                         </p>
-                        <button class="tabLinks bigScreenArrow" data-target="#work"><<</button>
-                        <p> <br> </p> <!--keeps button from overflowing-->
+                        <button class="tabLinks bigScreenArrow">
+                            <span class="button fas fa-angle-double-left" data-target="#work"></span>
+                        </button>
+                        <br>
 
                     </div> 
                         <div class="imgBox scroll">
-                                <img src="/build/images/previews/p1-preview-1.JPG" alt="Project #1/1">
-                                <img src="/build/images/previews/p1-preview-2.JPG" alt="Project #1/2">
-                                <img src="/build/images/previews/p1-preview-3.JPG" alt="Project #1/3">
-                                <img src="/build/images/previews/p1-preview-4.JPG" alt="Project #1/4">
-                                <img src="/build/images/previews/p1-preview-5.JPG" alt="Project #1/5">
-                                <img src="/build/images/previews/p1-preview-6.JPG" alt="Project #1/6">
-                                <img src="/build/images/previews/p1-preview-7.JPG" alt="Project #1/7">
-                                <img src="/build/images/previews/p1-preview-8.JPG" alt="Project #1/8">
-                                <img src="/build/images/previews/p1-preview-9.JPG" alt="Project #1/9">
+                                <img src="/build/images/previews/p1-preview-1.JPG" alt="Project #1/1" class="lbBtn hover-shadow" data-targer="#lightbox">
+                                <img src="/build/images/previews/p1-preview-2.JPG" alt="Project #1/2" class="lbBtn hover-shadow" data-targer="#lightbox">
+                                <img src="/build/images/previews/p1-preview-3.JPG" alt="Project #1/3" class="lbBtn hover-shadow" data-targer="#lightbox">
+                                <img src="/build/images/previews/p1-preview-4.JPG" alt="Project #1/4" class="lbBtn hover-shadow" data-targer="#lightbox">
+                                <img src="/build/images/previews/p1-preview-5.JPG" alt="Project #1/5" class="lbBtn hover-shadow" data-targer="#lightbox">
+                                <img src="/build/images/previews/p1-preview-6.JPG" alt="Project #1/6" class="lbBtn hover-shadow" data-targer="#lightbox">
+                                <img src="/build/images/previews/p1-preview-7.JPG" alt="Project #1/7" class="lbBtn hover-shadow" data-targer="#lightbox">
+                                <img src="/build/images/previews/p1-preview-8.JPG" alt="Project #1/8" class="lbBtn hover-shadow" data-targer="#lightbox">
+                                <img src="/build/images/previews/p1-preview-9.JPG" alt="Project #1/9" class="lbBtn hover-shadow" data-targer="#lightbox">
                         </div>
-                        <button class="tabLinks smallScreenArrow" data-target="#work"><<</button>
+                        <button class="tabLinks smallScreenArrow">
+                            <span class="button fas fa-angle-double-left" data-target="#work"></span>
+                        </button>
 
-                    <div id="lightBox" class="modal">
-
-
-                    </div>
                 </div>
             </div>
             <!--Project2-->
@@ -159,8 +160,10 @@
                             depending on how much clay was raised
                             between each cut/scratch.
                         </p>
-                        <button class="tabLinks bigScreenArrow" data-target="#work"><<</button>
-                        <p> <br> </p> <!--keeps button from overflowing-->
+                        <button class="tabLinks bigScreenArrow">
+                            <span class="button fas fa-angle-double-left" data-target="#work"></span>
+                        </button>
+                        <br>
                     </div> 
                         <div class="imgBox scroll">
                                 <img src="/build/images/previews/p2-preview-1.JPG" alt="Project #1/1">
@@ -169,8 +172,9 @@
                                 <img src="/build/images/previews/p2-preview-4.JPG" alt="Project #1/4">
                                 <img src="/build/images/previews/p2-preview-5.JPG" alt="Project #1/5">
                         </div>
-                        <button class="tabLinks smallScreenArrow" data-target="#work"><<</button>
-
+                        <button class="tabLinks smallScreenArrow">
+                            <span class="button fas fa-angle-double-left" data-target="#work"></span>
+                        </button>
                     </div>
                 </div>
             
@@ -192,10 +196,52 @@
             </div>
 
         </div>
-
            <!-- <div class="footer">
                 <div>by Teo Winkler, 2019</div>
             </div>-->
+        </div>
+
+        <!--Light Box-->
+        <div id="lightBox" class="modal">
+            <span class="close">&times;</span>
+            <div class="modal-content">
+                <div class="gallery">
+                    <img src="/build/images/gallery/p1-1.JPG" alt="Project #1/1">
+                </div>
+                <div class="gallery">
+                    <img src="/build/images/gallery/p1-2.JPG" alt="Project #1/2">
+                </div>
+                <div class="gallery">
+                    <img src="/build/images/gallery/p1-3.JPG" alt="Project #1/3">
+                </div>
+                <div class="gallery">
+                    <img src="/build/images/gallery/p1-4.JPG" alt="Project #1/4">
+                </div>
+                <div class="gallery">
+                    <img src="/build/images/gallery/p1-4.JPG" alt="Project #1/5">
+                </div>
+                <div class="gallery">
+                    <img src="/build/images/gallery/p1-6.JPG" alt="Project #1/6">
+                </div>
+                <div class="gallery">
+                    <img src="/build/images/gallery/p1-7.JPG" alt="Project #1/7">
+                </div>
+                <div class="gallery">
+                    <img src="/build/images/gallery/p1-8.JPG" alt="Project #1/8">
+                </div>
+                <div class="gallery">
+                    <img src="/build/images/gallery/p1-9.JPG" alt="Project #1/9">
+                </div>
+            </div>
+
+            <!--Next/previous buttons-->
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
+
+            <!--Caption text-->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
         </div>
     </div>
 
