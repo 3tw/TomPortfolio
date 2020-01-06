@@ -1,22 +1,4 @@
-//phone screen
-@media screen and (max-width: 450px)
-    .side > button
-        width: 100%
-    .main button
-        width: 100%
-    .text, #about
-        text-align: justify
-        padding-bottom: 0em
-    .poem
-        text-align: center
-    h1, h2
-        text-align: center
-    .onTop
-        padding-top: 0.5em
-    
-
-//smaller window-size
-@media screen and (max-width: 850px)
+@media screen and (max-width: 830px)    
     body
         overflow-y: hidden
         overflow-x: hidden
@@ -25,10 +7,15 @@
         grid-template-areas: "side" "main"
         grid-template-columns: 1fr
         grid-template-rows: min-content min-content
-        padding: 2em
+        padding: 3em 2em 3em 2em
+
 
     .main
-        padding-top: 0.5em
+        padding: 1em 0 0 0 
+    .main button
+        width: 100%
+    .side > button
+        width: 100%
     
     .projectContent
         grid-template-columns: 1fr
@@ -38,26 +25,30 @@
         overflow: scroll
         margin-top: 1em
 
-    .text
+    .text, #about
         overflow: hidden
         height: auto
         padding: 0em
-        
-    
+        text-align: justify
+
     #about
         grid-column-start: 1
         grid-column-end: 4
+
+    .poem
+        text-align: center
     
     .imgBox
-        grid-area: images
         overflow: hidden
-        width: 100%
-        grid-template-columns: 1fr
-        grid-auto-rows: 1fr
-    
-    .imgBox > img
-        width: 100%
-        height: 100%
-        object-fit: cover
+        justify-content: center
+        grid-template-columns: repeat(auto-fill, 25vw)
+        grid-auto-rows: 25vw
+        padding-left: 0
+
+    h1, h2
+        text-align: center
+
+    .onTop
+        padding-top: 0.5em
 
     

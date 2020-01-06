@@ -41,7 +41,7 @@ h2 {
   background-color: inherit;
   color: #444444;
   font-family: "Crimson Text", serif;
-  font-size: 150%;
+  font-size: 1.6em;
   line-height: 1.1em;
   cursor: pointer;
   border: none;
@@ -54,7 +54,7 @@ h2 {
   background-color: inherit;
   color: #444444;
   font-family: "Crimson Text", serif;
-  font-size: 140%;
+  font-size: 1.5em;
   line-height: 1.1em;
   cursor: pointer;
   border: none;
@@ -78,7 +78,7 @@ h2 {
 }
 
 .smallScreenArrow {
-  padding: 1em 0em 1em 0em;
+  padding: 1em 0em 3em 0em;
 }
 
 .projectContent button {
@@ -131,7 +131,7 @@ body {
   overflow: hidden;
   justify-items: stretch;
   align-content: stretch;
-  padding: 2em 1em 1em 3em;
+  padding: 3em 1em 1em 4em;
   height: 100%;
   width: 100%;
 }
@@ -147,13 +147,14 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   overflow: hidden;
+  padding-left: 1em;
 }
 
 #about {
   grid-column-start: 1;
   grid-column-end: 2;
   line-height: 1;
-  font-size: 90%;
+  font-size: 1em;
 }
 
 .projectContent {
@@ -169,9 +170,8 @@ body {
   height: 90vh;
   overflow-y: scroll;
   -ms-overflow-style: none;
-  font-size: 90%;
+  font-size: 1em;
   line-height: 1.1em;
-  padding-right: 10px;
 }
 
 .onTop {
@@ -190,13 +190,14 @@ body {
   grid-template-columns: repeat(auto-fill, 15vw);
   grid-auto-rows: 15vw;
   grid-gap: 5px;
+  padding-left: 1.5em;
 }
 
 .imgBox::-webkit-scrollbar {
   display: none;
 }
 
-.imgBox > img {
+.imgBox > a img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -208,107 +209,7 @@ body {
   clear: both;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba 0, 0, 0;
-}
-
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-}
-
-.close {
-  color: white;
-  postion: absolute;
-  margin: 10px 25px 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.gallery {
-  display: none;
-}
-
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 0;
-  margin-top: 0;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-  cursor: pointer;
-}
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.activeImg {
-  opacity: 1;
-}
-
-@media screen and (max-width: 450px) {
-  .side > button {
-    width: 100%;
-  }
-
-  .main button {
-    width: 100%;
-  }
-
-  .text, #about {
-    text-align: justify;
-    padding-bottom: 0em;
-  }
-
-  .poem {
-    text-align: center;
-  }
-
-  h1, h2 {
-    text-align: center;
-  }
-
-  .onTop {
-    padding-top: 0.5em;
-  }
-}
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 830px) {
   body {
     overflow-y: hidden;
     overflow-x: hidden;
@@ -318,11 +219,19 @@ body {
     grid-template-areas: "side" "main";
     grid-template-columns: 1fr;
     grid-template-rows: min-content min-content;
-    padding: 2em;
+    padding: 3em 2em 3em 2em;
   }
 
   .main {
-    padding-top: 0.5em;
+    padding: 1em 0 0 0;
+  }
+
+  .main button {
+    width: 100%;
+  }
+
+  .side > button {
+    width: 100%;
   }
 
   .projectContent {
@@ -334,10 +243,11 @@ body {
     margin-top: 1em;
   }
 
-  .text {
+  .text, #about {
     overflow: hidden;
     height: auto;
     padding: 0em;
+    text-align: justify;
   }
 
   #about {
@@ -345,18 +255,24 @@ body {
     grid-column-end: 4;
   }
 
-  .imgBox {
-    grid-area: images;
-    overflow: hidden;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-auto-rows: 1fr;
+  .poem {
+    text-align: center;
   }
 
-  .imgBox > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  .imgBox {
+    overflow: hidden;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 25vw);
+    grid-auto-rows: 25vw;
+    padding-left: 0;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  .onTop {
+    padding-top: 0.5em;
   }
 }
 
