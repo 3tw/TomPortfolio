@@ -28,13 +28,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //media queries
     if (matchMedia){
-        const smallScreen = window.matchMedia("(max-width: 850px)");
+        const smallScreen = window.matchMedia("(max-width: 830px)");
+        const bigScreen = window.matchMedia("(min-width: 830px)");
+
+
         smallScreen.addListener(moveArrows);
         moveArrows(smallScreen);
-
     }
 
-    //move arrows
+    // move arrows
     function moveArrows(smallScreen) {
         const bigArrows = document.querySelectorAll(".bigScreenArrow");
         const smallArrows = document.querySelectorAll(".smallScreenArrow");
@@ -56,4 +58,5 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
 });

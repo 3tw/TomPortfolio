@@ -9,23 +9,24 @@
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
-</head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300&display=swap" rel="stylesheet">
 
 <body>
     <div class="row">
         <!--Navigation Buttons-->
         <div class="side tabLinks">
-            <button class="button" data-target="#default">Tom Winkler</button>
-            <button class="button" data-target="#work">Work</button>
-            <button class="button" data-target="#about">About</button>
+            <button id="btn1" class="button" data-target="#default">Tom Winkler</button>
+            <button id="btn2" class="button" data-target="#exhibition">Exhibitions</button>
+            <button id="btn3" class="button" data-target="#work">Work</button>
+            <button id="btn4" class="button" data-target="#about">About</button>
         </div>
         <!--Main FlexBox-->
 
         <div class="main">
             <div class="tabContent tabLinks" id="work">
-                <button class="button" data-target="#project1">project#1</button>
-                <button class="button" data-target="#project2">project#2</button>
+                <button class="button" data-target="#project1">project #1</button>
+                <button class="button" data-target="#project2">project #2</button>
             </div>
             <!--Project1-->
 
@@ -71,7 +72,7 @@
                             Problems I did not forsee:
                             -as more clay gets extruded the intervals, even tough the force delivered remains unchanged,
                             become longer because of clay’s own weight;
-                            -position of the piston is not always vertical because it’s “fixed” to the body only with
+                            -position of the piston is not always vertical because it’s 'fixed' to the body only with
                             its head; upper part is not touching anything so it starts to lean. Because of this it has
                             to be constantly checked and moved into correct position.
                             -device and hammer are both saperate units; device moves out of center of impact with each
@@ -87,7 +88,7 @@
                             <br>
                             There is only one device now instead of
                             five - this was made possible by welding a
-                            laser-cut “head” onto the bottomside of the
+                            laser-cut 'head' onto the bottomside of the
                             cylinder (i.e. body); triangular head has a
                             hole cut in the center with the same diameter
                             as the body’s inside so clay can easily pass
@@ -105,7 +106,7 @@
                             legs of the device so they become connected.
                         </p>
                         <button class="tabLinks bigScreenArrow">
-                            <span class="button fas fa-angle-double-left" data-target="#work"></span>
+                            <span class="button" data-target="#work"><<</span>
                         </button>
                         <br>
 
@@ -120,66 +121,50 @@
                                 <a href="/build/images/gallery/p1-3.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#3">
                                     <img src="/build/images/previews/p1-preview-3.jpg" alt="Project #1/3">
                                 </a>
-                                <a href="/build/images/gallery/p1-4.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#3">
+                                <a href="/build/images/gallery/p1-4.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#4">
                                     <img src="/build/images/previews/p1-preview-4.jpg" alt="Project #1/4">
                                 </a>
-                                <a href="/build/images/gallery/p1-5.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                <a href="/build/images/gallery/p1-5.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#5">
                                     <img src="/build/images/previews/p1-preview-5.jpg" alt="Project #1/5">
                                 </a>
-                                <a href="/build/images/gallery/p1-6.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                <a href="/build/images/gallery/p1-6.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#6">
                                     <img src="/build/images/previews/p1-preview-6.jpg" alt="Project #1/6">
                                 </a>
-                                <a href="/build/images/gallery/p1-7.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                <a href="/build/images/gallery/p1-7.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#7">
                                     <img src="/build/images/previews/p1-preview-7.jpg" alt="Project #1/7">
                                 </a>
-                                <a href="/build/images/gallery/p1-8.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                <a href="/build/images/gallery/p1-8.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#8">
                                     <img src="/build/images/previews/p1-preview-8.jpg" alt="Project #1/8">
                                 </a>
-                                <a href="/build/images/gallery/p1-9.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                <a href="/build/images/gallery/p1-9.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#9">
                                     <img src="/build/images/previews/p1-preview-9.jpg" alt="Project #1/9">
                                 </a>
                         </div>
                         <button class="tabLinks smallScreenArrow">
-                            <span class="button fas fa-angle-double-left" data-target="#work"></span>
+                            <span class="button" data-target="#work"><<</span>
                         </button>
                 </div>
             </div>
-            <!--Project2-->
 
+            <!--Project2-->
             <div class="tabContent" id="project2">
                 <div class="projectContent scroll">
                     <div class="text scroll">
-                        <h1 class="onTop">“The Great scraping device #1”</h1>
+                        <h1 class="onTop">Project #2</h1>
                         <p class="poem">
                             clay in my left, <br>
                             spatula in my right <br>
-                            my mind, somwhere else, <br>
+                            my mind somwhere else, <br>
                             gentle strokes <br>
                             mointains emerge <br>
                         </p>
                         <p>
-                            The great scraping device #1 is a prototype
-                            device which uses a blade set under an angle
-                            to scratch clay in thin layers. It consists
-                            of metal framework, a box for the clay with
-                            no top side and with a bottom one that moves
-                            up and down with the rotation of the screw beneath.
-                            On the top of the framework are two rails on
-                            which a 4 wheel plate is placed. on te front
-                            of the plate a blade is attached.
+                            This is a prototipe device which uses a blade set under an angle to scratch clay in thin layers. It consists of metal framework, a box for the clay that has no top side and has a moving bottom one - with the rotation of the screw bottom is lifted up or down. On the top of the framework are two rails on which a plate is placed. On te front of the plate a blade is monuted. 
                             <br> <br>
-                            Clay is carefully placed into the box, so
-                            there is no air pockets, then it is raised
-                            untill the blade touches it - now it is set,
-                            plate is then pushed away from the box, clay
-                            is raised to desired height and a cut/scratch
-                            is made. Whit each cut/scratch clay starts
-                            to build up forming different textures
-                            depending on how much clay was raised
-                            between each cut/scratch.
+                            Clay is carefully placed into the box so there is no air pockets then it is raised untill the blade touches it - now it is set, plate is pushed away from the box, clay is raised to desired height and a scratch is made. Whit each scratch clay starts to build up forming different textures depending on how much clay was raised between each scratch. At certain height clay is no longer scratched but cut instead.
                         </p>
                         <button class="tabLinks bigScreenArrow">
-                            <span class="button fas fa-angle-double-left" data-target="#work"></span>
+                            <span class="button" data-target="#work"><<</span>
                         </button>
                         <br>
                     </div> 
@@ -193,33 +178,113 @@
                             <a href="/build/images/gallery/p2-3.jpg" data-fancybox="p2-gallery" data-type="image" data-caption="#3">
                                 <img src="/build/images/previews/p2-preview-3.jpg" alt="Project #2/3">
                             </a>
-                            <a href="/build/images/gallery/p2-4.jpg" data-fancybox="p2-gallery" data-type="image" data-caption="#3">
-                                <img src="/build/images/previews/p2-preview-4.jpg" alt="Project #2/4">
-                            </a>
-                            <a href="/build/images/gallery/p2-5.jpg" data-fancybox="p2-gallery" data-type="image" data-caption="#1">
-                                <img src="/build/images/previews/p2-preview-5.jpg" alt="Project #2/5">
-                            </a>
                         </div>
                         <button class="tabLinks smallScreenArrow">
-                            <span class="button fas fa-angle-double-left" data-target="#work"></span>
+                            <span class="button" data-target="#work"><<</span>
                         </button>
                     </div>
                 </div>
+
+            <!-- Exhibitions -->
+            <div class="tabContent tabLinks" id="exhibition">
+                <button class="button" data-target="#exhibition1">heartefact festival 2019 | group exhibition</button>
+            </div>
+            <div class="tabContent" id="exhibition1">
+                <div class="projectContent scroll">
+                    <div class="text scroll">
+                        <p class="onTop">
+                            Short explanation: <br>
+                            Festival theme was: 'What will happen after?' <br>
+                            Vinča is a village near Belgrade where city's depony is located. Depony is often set on fire. <br>
+                            'Vinča gori, mene boli'- if translated literaly it means: 'Vinča is burning, I am in pain', but 'boli' is acctualy
+                            a very common figure of speech expressing lack of interest - it can be read as "I really don't care'
+                        </p>
+                            <h1>'Vinča gori, mene boli'</h1>
+                        <p>
+                            27.10.2019: <br>
+                            Air pollution is alarmingly high: thermoplants, traffic, Vinča.<br>
+                            Almost no one wears a mask <br>
+                            Almost no one cares about what will happen after. <br>
+                            My lungs hurt, my head hurt.
+                            <br>
+                            <br>
+                            Now I don't care.
+                            <br>
+                            <br>
+                            WHAT WILL HAPPEN AFTER? <br>
+                            I will continue to sculpt. <br>
+                            In half a year I am leaving Belgrade. <br>
+                        </p>
+                        <p>
+                            <br>/srb/            
+                            <h1>'Vinča gori, mene boli'</h1>
+
+                            27.10.2019: <br>  
+                            Veoma visoki stepen zagađenosti vazduha: termoelektrane, saobraćaj, Vinča.<br>  
+                            Malo ko nosi masku.<br>  
+                            Malo ljudi briga šta ce biti posle. <br>
+                            Mene su bolela pluća, bolela me glava.
+                            <br>  
+                            <br>
+                            Sada me boli.
+                            <br>  
+                            <br>  
+                            ŠTA ĆE BITI POSLE? <br>  
+                            Ja ću vajati dalje. <br>  
+                            Za pola godine napuštam Beograd. <br>  
+                        </p>
+
+                        <button class="tabLinks bigScreenArrow">
+                            <span class="button" data-target="#exhibition"><<</span>
+                        </button>
+                        <br>
+
+                    </div> 
+                        <div class="imgBox scroll">
+                                <a href="/build/images/gallery/e1-1.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                    <img src="/build/images/previews/e1-preview-1.jpg" alt="Project #1/1">
+                                </a>
+                                <a href="/build/images/gallery/e1-2.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#2">
+                                    <img src="/build/images/previews/e1-preview-2.jpg" alt="Project #1/2">
+                                </a>
+                                <a href="/build/images/gallery/e1-3.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#3">
+                                    <img src="/build/images/previews/e1-preview-3.jpg" alt="Project #1/3">
+                                </a>
+                                <a href="/build/images/gallery/e1-4.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#3">
+                                    <img src="/build/images/previews/e1-preview-4.jpg" alt="Project #1/4">
+                                </a>
+                                <a href="/build/images/gallery/e1-5.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                    <img src="/build/images/previews/e1-preview-5.jpg" alt="Project #1/5">
+                                </a>
+                                <a href="/build/images/gallery/e1-6.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                    <img src="/build/images/previews/e1-preview-6.jpg" alt="Project #1/6">
+                                </a>
+                                <a href="/build/images/gallery/e1-7.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                    <img src="/build/images/previews/e1-preview-7.jpg" alt="Project #1/7">
+                                </a>
+                                <a href="/build/images/gallery/e1-8.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                    <img src="/build/images/previews/e1-preview-8.jpg" alt="Project #1/8">
+                                </a>
+                                <a href="/build/images/gallery/e1-9.jpg" data-fancybox="p1-gallery" data-type="image" data-caption="#1">
+                                    <img src="/build/images/previews/e1-preview-9.jpg" alt="Project #1/9">
+                                </a>
+                        </div>
+                        <button class="tabLinks smallScreenArrow">
+                            <span class="button" data-target="#exhibition"><<</span>
+                        </button>
+                </div>
+            </div>
             
             <!--About-->
 
             <div class="tabContent" id="about">
                 <p class="onTop">
-                    Born in Slovenia in 1996, in 2015 enrolled to school
-                    for stone design than proceeded to Academy of Fine
-                    Arts and Design in Ljubljana in 2017. Curently
-                    studying as an exchange student at Faculty of Fine
-                    Arts in Belgrade, Serbia.
-                    <br>
-                    <br>
-                    Has zero solo shows.
-                    <br>
-                    Has zero group shows.
+                    1996 &nbsp; Slovenia <br>
+                    2015 &nbsp; Stone Design - Higher Vocational College, Sežana <br> 
+                    2017 &nbsp; Sculpture - Academy of Fine
+                    Arts and Design, Ljubljana <br>
+                    2019 &nbsp; Sculpture - Faculty of Fine
+                    Arts, Belgrade
                 </p>
             </div>
 
