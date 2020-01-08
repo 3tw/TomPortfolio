@@ -21,8 +21,10 @@ html {
 }
 
 @font-face {
-  font-family: "Crimson Text", serif;
-  src: url("https://fonts.googleapis.com/css?family=Crimson+Text&display=swap");
+  font-family: "Raleway", sans-serif;
+}
+@font-face {
+  font-family: "Lato", sans-serif;
 }
 h1 {
   font-weight: normal;
