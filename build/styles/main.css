@@ -42,9 +42,9 @@ h2 {
   display: block;
   background-color: inherit;
   color: #444444;
-  font-family: "Crimson Text", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.6em;
-  line-height: 1.1em;
+  line-height: 1.4em;
   cursor: pointer;
   border: none;
   outline: none;
@@ -55,9 +55,9 @@ h2 {
 .main button {
   background-color: inherit;
   color: #444444;
-  font-family: "Crimson Text", serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.5em;
-  line-height: 1.1em;
+  line-height: 1.2em;
   cursor: pointer;
   border: none;
   outline: none;
@@ -77,10 +77,11 @@ h2 {
 
 .bigScreenArrow, .smallScreenArrow {
   display: none;
+  font: "Lato", sans-serif;
 }
 
 .smallScreenArrow {
-  padding: 1em 0em 3em 0em;
+  padding: 1em 0em 1em 0em;
 }
 
 .projectContent button {
@@ -108,9 +109,8 @@ body {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  font-family: "Crimson Text", serif;
-  color: #444444;
-  line-height: 0.8;
+  font-family: "Source Sans pro", sans-serif;
+  line-height: 1.1em;
 }
 
 .footer {
@@ -150,12 +150,13 @@ body {
   grid-template-rows: 1fr;
   overflow: hidden;
   padding-left: 1em;
+  padding-top: 5px;
 }
 
 #about {
   grid-column-start: 1;
-  grid-column-end: 2;
-  line-height: 1;
+  grid-column-end: 3;
+  line-height: 1.2em;
   font-size: 1em;
 }
 
@@ -173,7 +174,7 @@ body {
   overflow-y: scroll;
   -ms-overflow-style: none;
   font-size: 1em;
-  line-height: 1.1em;
+  line-height: 1.2em;
 }
 
 .onTop {
@@ -192,7 +193,7 @@ body {
   grid-template-columns: repeat(auto-fill, 15vw);
   grid-auto-rows: 15vw;
   grid-gap: 5px;
-  padding-left: 1.5em;
+  padding-left: 2em;
 }
 
 .imgBox::-webkit-scrollbar {
@@ -211,6 +212,21 @@ body {
   clear: both;
 }
 
+@media screen and (max-width: 500px) {
+  .side {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-template-areas: "name name name" "exh work about";
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 830px) {
+  .side {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-areas: "name exh work about";
+  }
+}
 @media screen and (max-width: 830px) {
   body {
     overflow-y: hidden;
@@ -220,8 +236,8 @@ body {
   .row {
     grid-template-areas: "side" "main";
     grid-template-columns: 1fr;
-    grid-template-rows: min-content min-content;
-    padding: 3em 2em 3em 2em;
+    grid-template-rows: min-content auto;
+    padding: 1em 0.5em 1em 0.5em;
   }
 
   .main {
@@ -236,19 +252,33 @@ body {
     width: 100%;
   }
 
+  #btn1 {
+    grid-area: name;
+  }
+
+  #btn2 {
+    grid-area: exh;
+  }
+
+  #btn3 {
+    grid-area: work;
+  }
+
+  #btn4 {
+    grid-area: about;
+  }
+
   .projectContent {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, max-content);
     grid-template-areas: "text" "images";
-    height: calc(100vh - 170px);
+    height: calc(100vh - 120px);
     overflow: scroll;
-    margin-top: 1em;
   }
 
   .text, #about {
-    overflow: hidden;
     height: auto;
-    padding: 0em;
+    padding: 0em 1em 0em 1em;
     text-align: justify;
   }
 
