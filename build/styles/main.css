@@ -21,10 +21,10 @@ html {
 }
 
 @font-face {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
 }
 @font-face {
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 h1 {
   font-weight: normal;
@@ -123,6 +123,7 @@ body {
 * {
   box-sizing: border-box;
   padding: 0;
+  outline: none;
 }
 
 .row {
@@ -133,7 +134,7 @@ body {
   overflow: hidden;
   justify-items: stretch;
   align-content: stretch;
-  padding: 3em 1em 1em 4em;
+  padding: 3em 1em 1em 5em;
   height: 100%;
   width: 100%;
 }
@@ -162,7 +163,7 @@ body {
 
 .projectContent {
   display: grid;
-  grid-template-columns: 18em 1fr;
+  grid-template-columns: 20em auto;
   grid-template-rows: 1fr;
   grid-template-areas: "text images";
   height: 93vh;
@@ -175,6 +176,7 @@ body {
   -ms-overflow-style: none;
   font-size: 1em;
   line-height: 1.2em;
+  padding-right: 1em;
 }
 
 .onTop {
@@ -190,10 +192,10 @@ body {
   overflow: scroll;
   -ms-overflow-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 15vw);
-  grid-auto-rows: 15vw;
+  grid-template-columns: repeat(auto-fill, 13vw);
+  grid-auto-rows: 13vw;
   grid-gap: 5px;
-  padding-left: 2em;
+  padding-left: 1em;
 }
 
 .imgBox::-webkit-scrollbar {
