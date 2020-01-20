@@ -6,6 +6,9 @@
         grid-template-rows: repeat(2, min-content)
         grid-template-areas: "name name ." "exh work about"
 
+    #btn1
+        text-align: left
+
 // one-level navigation
 @media screen and (min-width: 500px) and (max-width:  830px)
     .side
@@ -47,7 +50,7 @@
         height: calc(100vh - 120px) 
         overflow: scroll
 
-    .text, #about
+    .text
         height: auto
         padding: 0em 1em 0em 1em
         text-align: justify
@@ -55,6 +58,8 @@
     #about
         grid-column-start: 1
         grid-column-end: 4
+        height: auto
+        padding: 0em 1em 0em 1em
 
     .poem
         text-align: center
