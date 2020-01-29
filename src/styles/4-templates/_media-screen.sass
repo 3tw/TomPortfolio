@@ -5,7 +5,8 @@
         grid-template-columns: repeat(3, min-content)
         grid-template-rows: repeat(2, min-content)
         grid-template-areas: "name name ." "exh work about"
-        justify-content: center
+        justify-content: left
+        margin: 0 1em 0 1em
 
     #btn1,
     #btn2,
@@ -14,12 +15,20 @@
         text-align: left
         padding-right: 0.3em
 
+    .main button
+        text-align: left
+    .main .smallScreenArrow
+        text-align: center
+
 // one-level navigation
 @media screen and (min-width: 415px) and (max-width:  830px)
     .side
         display: grid
         grid-template-columns: repeat(3, auto)
         grid-template-areas: "name exh work about"
+
+    .main button
+        text-align: center
     
 @media screen and (max-width: 830px)
     body
@@ -36,6 +45,7 @@
         padding: 1em 0 0 0 
     .main button
         width: 100%
+
     .side > button
         width: 100%
     
@@ -48,8 +58,11 @@
     #btn4
         grid-area: about
 
+    .tab-content
+        margin: 0 1em 0 1em
+
     .projectContent
-        grid-template-columns: 1fr
+        grid-template-columns: auto
         grid-template-rows: repeat(2, max-content)
         grid-template-areas: "text" "images"
         height: calc(100vh - 120px) 
@@ -57,8 +70,8 @@
 
     .text
         height: auto
-        padding: 0em 2em 0em 2em
         text-align: left
+        padding: 0
 
     #about
         grid-column-start: 1
@@ -77,7 +90,7 @@
         padding-left: 0
 
     h1, h2
-        text-align: center
+        text-align: left
 
     .onTop
         padding-top: 0.5em

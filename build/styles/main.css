@@ -88,13 +88,12 @@ h2 {
   font-size: 110%;
 }
 
-.tabContent {
+.tab-content {
   display: none;
   animation: fadeEffect 1s;
   height: inherit;
   text-align: inherit;
   background-color: inherit;
-  width: 100%;
   grid-column-start: 1;
   grid-column-end: 4;
 }
@@ -225,7 +224,8 @@ body {
     grid-template-columns: repeat(3, min-content);
     grid-template-rows: repeat(2, min-content);
     grid-template-areas: "name name ." "exh work about";
-    justify-content: center;
+    justify-content: left;
+    margin: 0 1em 0 1em;
   }
 
   #btn1,
@@ -235,12 +235,24 @@ body {
     text-align: left;
     padding-right: 0.3em;
   }
+
+  .main button {
+    text-align: left;
+  }
+
+  .main .smallScreenArrow {
+    text-align: center;
+  }
 }
 @media screen and (min-width: 415px) and (max-width: 830px) {
   .side {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-areas: "name exh work about";
+  }
+
+  .main button {
+    text-align: center;
   }
 }
 @media screen and (max-width: 830px) {
@@ -284,8 +296,12 @@ body {
     grid-area: about;
   }
 
+  .tab-content {
+    margin: 0 1em 0 1em;
+  }
+
   .projectContent {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
     grid-template-rows: repeat(2, max-content);
     grid-template-areas: "text" "images";
     height: calc(100vh - 120px);
@@ -294,8 +310,8 @@ body {
 
   .text {
     height: auto;
-    padding: 0em 2em 0em 2em;
     text-align: left;
+    padding: 0;
   }
 
   #about {
@@ -318,7 +334,7 @@ body {
   }
 
   h1, h2 {
-    text-align: center;
+    text-align: left;
   }
 
   .onTop {

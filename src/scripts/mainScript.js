@@ -1,6 +1,6 @@
 //check if doc is loaded
 document.addEventListener('DOMContentLoaded', function () {
-    const tabContents = document.querySelectorAll(".tabContent");
+    const tabContents = document.querySelectorAll(".tab-content");
 
     document.addEventListener("click", function(e) {
         //button listener
