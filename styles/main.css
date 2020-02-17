@@ -41,7 +41,7 @@ h2 {
 .side button {
   display: block;
   background-color: inherit;
-  color: #444444;
+  color: black;
   font-family: "Lato", sans-serif;
   font-size: 1.6em;
   line-height: 1.4em;
@@ -269,7 +269,7 @@ body {
   }
 
   .main {
-    padding: 1em 0 0 0;
+    padding: 0.5rem 0 0 0;
   }
 
   .main button {
@@ -278,6 +278,7 @@ body {
 
   .side > button {
     width: 100%;
+    line-height: 2rem;
   }
 
   #btn1 {
@@ -297,7 +298,12 @@ body {
   }
 
   .tab-content {
-    margin: 0 1em 0 1em;
+    margin: 0;
+  }
+
+  #work,
+#exhibition {
+    padding: 1rem 1rem 0 1rem;
   }
 
   .projectContent {
@@ -311,7 +317,7 @@ body {
   .text {
     height: auto;
     text-align: left;
-    padding: 0;
+    padding: 0 1rem 0 1rem;
   }
 
   #about {
@@ -328,7 +334,7 @@ body {
   .imgBox {
     overflow: hidden;
     justify-content: center;
-    grid-template-columns: repeat(auto-fill, 25vw);
+    grid-template-columns: repeat(auto-fill, 28vw);
     grid-auto-rows: 25vw;
     padding-left: 0;
   }
