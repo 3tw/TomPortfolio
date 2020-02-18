@@ -125,7 +125,7 @@ h2 {
   overflow: hidden;
   justify-items: stretch;
   align-content: stretch;
-  padding: 3rem 2rem 0 6rem;
+  padding: 3rem 0 0 4rem;
   height: 100%;
   width: 100%;
 }
@@ -158,7 +158,7 @@ h2 {
 
 .projectContent {
   display: grid;
-  grid-template-columns: 20em auto;
+  grid-template-columns: 18em auto;
   grid-template-rows: 1fr;
   grid-template-areas: "text images";
   height: 93vh;
@@ -187,8 +187,8 @@ h2 {
   overflow: scroll;
   -ms-overflow-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 13vw);
-  grid-auto-rows: 13vw;
+  grid-template-columns: repeat(auto-fill, 15vw);
+  grid-auto-rows: 15vw;
   grid-gap: 5px;
   padding-left: 1em;
 }
@@ -308,9 +308,9 @@ h2 {
     padding-top: 0.7rem;
   }
 }
-@media screen and (max-width: 1070px) {
+@media screen and (max-width: 1000px) {
   .row {
-    padding: 3rem 2rem 0 2rem;
+    padding: 3rem 0 0 2rem;
   }
 }
 
