@@ -10,14 +10,23 @@
   }
 }
 html {
-  position: fixed;
-  min-width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
   scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Source Sans pro", sans-serif;
+  line-height: 1.1em;
+  color: #444444;
+}
+
+.footer {
+  grid-area: footer;
+  font-size: 9px;
+  justify-self: end;
+  align-self: end;
 }
 
 @font-face {
@@ -102,24 +111,6 @@ h2 {
   display: block;
 }
 
-body {
-  padding: 0;
-  margin: 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  font-family: "Source Sans pro", sans-serif;
-  line-height: 1.1em;
-  color: #444444;
-}
-
-.footer {
-  grid-area: footer;
-  font-size: 9px;
-  justify-self: end;
-  align-self: end;
-}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -134,7 +125,7 @@ body {
   overflow: hidden;
   justify-items: stretch;
   align-content: stretch;
-  padding: 3em 1em 1em 5em;
+  padding: 3rem 2rem 0 6rem;
   height: 100%;
   width: 100%;
 }
@@ -218,113 +209,79 @@ body {
   clear: both;
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 500px) {
   .side {
-    display: grid;
-    grid-template-columns: repeat(3, min-content);
-    grid-template-rows: repeat(2, min-content);
-    grid-template-areas: "name name ." "exh work about";
-    justify-content: left;
-    margin: 0 1em 0 1em;
+    flex-direction: column;
   }
 
-  #btn1,
-#btn2,
-#btn3,
-#btn4 {
-    text-align: left;
-    padding-right: 0.3em;
+  .home-btn {
+    flex-basis: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  body {
+    overflow: scroll;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .side {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .side button {
+    padding-right: 0.5rem;
+  }
+
+  .btns {
+    flex-basis: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .main {
+    overflow: hidden;
+    display: inline-block;
+    padding: 0;
   }
 
   .main button {
+    width: 100%;
     text-align: left;
   }
 
   .main .smallScreenArrow {
     text-align: center;
   }
-}
-@media screen and (min-width: 415px) and (max-width: 830px) {
-  .side {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-template-areas: "name exh work about";
-  }
-
-  .main button {
-    text-align: center;
-  }
-}
-@media screen and (max-width: 830px) {
-  body {
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
-
-  .row {
-    grid-template-areas: "side" "main";
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content auto;
-    padding: 1em 0.5em 1em 0.5em;
-  }
-
-  .main {
-    padding: 0.5rem 0 0 0;
-  }
-
-  .main button {
-    width: 100%;
-  }
-
-  .side > button {
-    width: 100%;
-    line-height: 2rem;
-  }
-
-  #btn1 {
-    grid-area: name;
-  }
-
-  #btn2 {
-    grid-area: exh;
-  }
-
-  #btn3 {
-    grid-area: work;
-  }
-
-  #btn4 {
-    grid-area: about;
-  }
-
-  .tab-content {
-    margin: 0;
-  }
 
   #work,
 #exhibition {
-    padding: 1rem 1rem 0 1rem;
+    padding-top: 1rem;
   }
 
   .projectContent {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(2, max-content);
-    grid-template-areas: "text" "images";
-    height: calc(100vh - 120px);
-    overflow: scroll;
+    display: inline-block;
+    height: auto;
+    overflow: hidden;
   }
 
   .text {
     height: auto;
     text-align: left;
-    padding: 0 1rem 0 1rem;
+    padding: 0;
   }
 
   #about {
     grid-column-start: 1;
     grid-column-end: 4;
     height: auto;
-    padding: 0em 2em 0em 2em;
+    padding: 0;
   }
 
   .poem {
@@ -332,11 +289,14 @@ body {
   }
 
   .imgBox {
+    display: inline-block;
+    padding: 0;
     overflow: hidden;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, 28vw);
-    grid-auto-rows: 25vw;
-    padding-left: 0;
+  }
+
+  .imgBox > a img {
+    width: 32%;
+    height: auto;
   }
 
   h1, h2 {
@@ -344,7 +304,12 @@ body {
   }
 
   .onTop {
-    padding-top: 0.5em;
+    padding-top: 1rem;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .row {
+    padding: 3rem 2rem 0 2rem;
   }
 }
 
