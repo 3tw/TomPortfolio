@@ -1,77 +1,70 @@
 //two-level navigation
 @media screen and (max-width: 500px)
-    .side
-        flex-direction: column
-    .home-btn
-        flex-basis: auto
-    
+	.row .side
+		grid-template-columns: repeat(3, min-content)
+		grid-template-rows: 1fr 1fr
+		grid-template-areas: "btn1 btn1 btn1" "btn2 btn3 btn4"
+	#btn1
+		grid-area: btn1
+		text-align: left
 
 @media screen and (max-width: 650px)
-    body
-        overflow: scroll
-    body .row
-        display: flex
-        flex-direction: column
-        padding: 1rem
-    .side
-        display: flex
-        justify-content: flex-start
-    .main
-        overflow: hidden
-        display: inline-block
-        padding: 0
+	body
+		overflow: scroll
+	body .row
+		display: flex
+		flex-direction: column
+		padding: 1rem
+	.side
+		display: grid
+		grid-template-columns: max-content auto auto auto
+	.main
+		overflow: hidden
+		display: inline-block
+		margin: 0
 
-    .side button
-        padding-right: 0.5rem
-        line-height: 1.8rem
-    .btns
-        flex-basis: auto
-        display: flex
-        flex-direction: row
-        justify-content: flex-start
-    .main button
-        width: 100%
-        text-align: left
-    .main .smallScreenArrow
-        text-align: center
-    .bigScreenArrow
-        display: none
-    .smallScreenArrow
-        display: inline-block
+	h1, h2
+		text-align: left
+	.side button
+		padding-right: 0.5rem
+		line-height: 1.8rem
+	.bigScreenArrow
+		display: none
+	.smallScreenArrow
+		display: inline-block
 
-    #work,
-    #exhibition
-        padding-top: 0.7rem
-    .projectContent
-        display: inline-block
-        height: auto
-        overflow: hidden
-    .text
-        height: auto
-        text-align: left
-        padding: 0
+	#work,
+	#exhibition
+		padding: 0.7rem 0 0 0
+	.projectContent
+		display: inline-block
+		height: auto
+		overflow: hidden
+		text-align: center
+	.text
+		height: auto
+		text-align: left
+		padding: 0
+	#about
+		height: auto
+		padding: 0
 
-    #about
-        grid-column-start: 1
-        grid-column-end: 4
-        height: auto
-        padding: 0
+	.imgBox
+		display: inline-block
+		padding: 0
+		overflow: hidden
+		height: auto
 
-    .poem
-        text-align: center
-    
-    .imgBox
-        display: inline-block
-        padding: 0
-        overflow: hidden
-        height: auto
+	.imgBox > a img
+		width: 32%
+		height: auto
 
-    .imgBox > a img
-        width: 32%
-        height: auto
-
-    h1, h2
-        text-align: left
-
-    .onTop
-        padding-top: 1rem
+	#project1,
+	#project2
+	#exhibition1,
+	#about
+		padding-top: 1rem
+		
+@media screen and (min-width: 1200px)
+	.row
+		padding: 2rem 5rem 1rem 5rem
