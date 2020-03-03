@@ -147,6 +147,7 @@ h2 {
   -ms-overflow-style: none;
   font-size: 1.1rem;
   line-height: 1.3rem;
+  padding-left: 1.5rem;
 }
 
 .text::-webkit-scrollbar {
@@ -161,8 +162,10 @@ h2 {
   grid-template-columns: 15vw;
   grid-auto-rows: 15vw;
   grid-gap: 5px;
-  padding: 0 3rem 0 1rem;
+  padding: 0 1.5rem 0 1rem;
   height: 90vh;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .imgBox::-webkit-scrollbar {
@@ -178,7 +181,7 @@ h2 {
 #about {
   grid-column-start: 1;
   grid-column-end: 3;
-  line-height: 1.2em;
+  line-height: 1.3rem;
   font-size: 1.1rem;
 }
 
@@ -288,7 +291,9 @@ h2 {
     height: auto;
   }
 
-  #exhibition1,
+  #project1,
+#project2,
+#exhibition1,
 #about {
     padding-top: 1rem;
   }
